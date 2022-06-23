@@ -42,7 +42,7 @@ function HomePage() {
 
 
 <h2>signup form</h2>
-<form onSubmit={(e) => {handleSubmit(e)}}>
+<form className ="form" onSubmit={(e) => {handleSubmit(e)}}>
       <div>
         <label htmlFor="username">Username</label>
         <input onChange = {handleChange}

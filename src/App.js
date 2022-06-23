@@ -23,7 +23,7 @@ function App() {
           {/* create dynamic routing for the following: */}
          <Route path="/details/:Id" element={ <DetailsPage />} />
          <Route path="/profile/:Id" element={ <ProfilePage />} />
-         <Route path="/update-profile/:id" element={ <UpdateProfilePage />} />
+         <Route path="/update-profile" element={ <UpdateProfilePage />} />
          <Route path="/test-page" element={ <TestPage />} />
          <Route path='*' element={<ErrorPage />} />
       </Routes>
