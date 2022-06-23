@@ -10,6 +10,7 @@ import DetailsPage from './pages/DetailsPage';
 import CreateEntryPage from './pages/CreateEntryPage';
 import ProfilePage from './pages/ProfilePage';
 import UpdateProfilePage from './pages/UpdateProfilePage';
+import TestPage from "./pages/TestPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
          <Route path="/details/:Id" element={ <DetailsPage />} />
          <Route path="/profile/:Id" element={ <ProfilePage />} />
          <Route path="/update-profile/:id" element={ <UpdateProfilePage />} />
+         <Route path="/test-page" element={ <TestPage />} />
          <Route path='*' element={<ErrorPage />} />
       </Routes>
     </div>

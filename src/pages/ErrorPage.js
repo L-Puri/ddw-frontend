@@ -1,10 +1,12 @@
 import React from 'react'
-//import ErrorImage from '../public/error-404.png'
+import ErrorImage from '../images/error_404.png'
 
 function ErrorPage() {
   return (
     
-    <div><p>404 Error Message</p>{/*<img src={ErrorImage} alt="404 error message" />*/}</div>
+    <div className='error-message'><img src={ErrorImage}
+    alt="404 error message" />
+    </div>
   )
 }
 
