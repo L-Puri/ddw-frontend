@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
+// import NavBar from './components/NavBar'
 
 import './App.css';
 // import Axios from "axios";
@@ -15,9 +16,9 @@ import TestPage from "./pages/TestPage";
 function App() {
   return (
     <div>
-      {/* insert navbar here */}
+      {/*<NavBar />*/}
       <Routes>
-         <Route path="/" element={ <HomePage />} />
+        <Route path="/" element={ <HomePage />} />
          <Route path="/create-entry" element={ <CreateEntryPage />} />
           {/* create dynamic routing for the following: */}
          <Route path="/details/:Id" element={ <DetailsPage />} />
