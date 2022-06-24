@@ -1,10 +1,9 @@
-import { useState } from "react";
-import React from 'react'
+import React, { useState, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from '../context/auth.context' // new
 
 const API_URL = "http://localhost:5005";
-
 
 function LoginPage(props) {
 
@@ -13,21 +12,22 @@ function LoginPage(props) {
     const [errorMessage, setErrorMessage] = useState(undefined);
     
     const navigate = useNavigate();
+
+    const { storeToken } = useContext(AuthContext) //new
    
     const handleEmail = (e) => setEmail(e.target.value);
     const handlePassword = (e) => setPassword(e.target.value);
    
-    
     const handleLoginSubmit = (e) => {
         e.preventDefault();
         const requestBody = { email, password };
         //console.log(requestBody) 
         axios.post(`${API_URL}/auth/login`, requestBody)
-        // this does not   
+        
         .then((response) => {
-          console.log(response)
-          console.log('JWT token', response.data.authToken );
-        navigate('/');                            
+        console.log('JWT token', response.data.authToken );
+        storeToken(response.data.authToken);
+        navigate('/profile/asdwd');                            
                 
       })
       .catch((error) => {
@@ -63,8 +63,6 @@ function LoginPage(props) {
         </form>
         { errorMessage && <p className="error-message">{errorMessage}</p> }
    
-        {/* we should enable users to "switch between login and signup component" */}
-        {/* for the beginning, I gues first showing signup and then login is fine */}
       </div>
     )
 }

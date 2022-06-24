@@ -1,6 +1,10 @@
-.App {
-  text-align: center;
+html {
+  background-color: #FDF5DF;
 }
+
+/*.App {
+  text-align: center;
+}*/
 
 /* ========== NavBar ========== */
 
@@ -19,6 +23,7 @@
   height: 40px;
   position: fixed;
   top: 0;
+  z-index: 100;
 }
 
 .brand-logo {
@@ -28,6 +33,8 @@
   width: auto;
   text-decoration: none;
   margin-top: 5px;
+  margin-left: 5px;
+  
 }
 
 #brand-name {
@@ -37,6 +44,7 @@
   font-size: 20px;
   margin-left: 10px;
   margin: auto;
+  padding-left: 10px;
 }
 
 .navbar-links ul {
@@ -50,13 +58,13 @@
 }
 
 .navbar-links li a {
-  font-size: 12px;
+  font-size: 13px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-decoration: none;
   color: whitesmoke;
   padding: 4px;
   display: block;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .navbar-links li:hover {
@@ -83,7 +91,7 @@
 
 }
 
-@media (max-width: 650px) {
+@media (max-width: 773px) {
   .toggle-button {
     display: flex;
   }
@@ -140,3 +148,23 @@ h1 {
 
 /* ========== Forms ========== */
 
+
+/* ========== Test Page ========== */
+.container {
+  position: relative;
+}
+
+.title-test {
+  margin-top: 50px;
+  margin-left: 10px;
+  position: absolute;
+  color: #1BA098;
+  text-shadow: 1px 1px 5px #A9A9AC;
+
+}
+
+.bcg-homepage {
+  align-items: center;
+  max-width: 100vw;
+  height: auto;
+}

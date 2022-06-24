@@ -1,27 +1,28 @@
 import React from 'react'
-// import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 function ProfilePage() {
   return (
     <div>
-        <h1>Profile Page</h1>
-        <form action="/create-profile" method="GET">
-          <button class="profile-btn" type="submit">Create Profile</button>
-        </form>
+      <div>
+      <h1>Profile Page</h1>
+      {/* <img src={url} alt=" " className=" " /> */}
+      </div>
+        
 
-        <form action="/update-profile/user._id" method="GET">
-          <button class="profile-btn" type="submit">Update Profile</button>
-        </form>
+        <Link to="/ProfilePage"> About </Link>
 
-        <form action="/auth/user._id" method="POST">
-          <button class="profile-btn" type="submit">Delete Profile</button>
-        </form>
-
-        <h2>FriendList</h2>
         {/* render list of friends, which is an array in the db */}
-        <h2>BucketList</h2>
+        <div>
+        <h2>List of Friends</h2>
+        </div>
+      
         {/* render list of your "entries", which are saved in the database */}
+        <div>
+        <h2>Personal BucketList</h2>
+        <button>Add List</button>
+          </div>
     </div>
   )
 }

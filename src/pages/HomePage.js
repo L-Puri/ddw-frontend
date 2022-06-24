@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import {useState} from 'react'
-import { Link, useNavigate } from "react-router-dom" // new
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -14,6 +14,8 @@ function HomePage() {
   const [email, setEmail] =  useState(" ")
   const [password, setPassword] =  useState(" ")  
 
+  const navigate = useNavigate();
+
   const handleSubmit = async event => {
     event.preventDefault()
     let newUser = {
@@ -22,7 +24,8 @@ function HomePage() {
       password
     }
     let responseAxios = await axios.post("http://localhost:5005/auth/signup", newUser)
-    // navigate ('/profilePage')
+    navigate('/login')
+    
   }
   
   const handleChange = event => {
@@ -40,7 +43,7 @@ function HomePage() {
   return (
     <div>
         <h1 className='page-title'>Don't Die Without... HomePage</h1>
-        <p>this should be displayed with the URL "/" !!!</p>
+        
 
 {/* new form: signup */}
 {/* use conditional rendering: default: login form, a link should rerender to signup */}

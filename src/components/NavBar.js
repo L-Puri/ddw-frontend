@@ -17,7 +17,6 @@ function NavBar () {
         <img
         src={DDWLogo}
         alt="DDW Logo"
-        margin-left="5"
         height="35"
         loading="lazy"
         />
@@ -39,6 +38,8 @@ function NavBar () {
             <li><a href="/test-page">Test Page</a></li>
             <li><a href="/fgladfghl">Error Page</a></li>
         </ul>
+        {/* <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+        <button id="close-menu-btn"><i class="uil uil-multiply"></i></button> */}
     </div>
 </nav>
 
