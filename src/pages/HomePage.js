@@ -2,6 +2,8 @@ import React from 'react'
 import axios from 'axios'
 import {useState} from 'react'
 import { useNavigate } from "react-router-dom";
+// import SignupForm from '../components/SignupForm'
+
 
 
 
@@ -44,9 +46,11 @@ function HomePage() {
     <div>
         <h1 className='page-title'>Don't Die Without... HomePage</h1>
         
+        
 
 {/* new form: signup */}
 {/* use conditional rendering: default: login form, a link should rerender to signup */}
+{/* <SignupForm /> */}
 
 
 <h2>signup form</h2>

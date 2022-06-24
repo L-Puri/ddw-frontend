@@ -14,6 +14,7 @@ import CreateEntryPage from './pages/CreateEntryPage';
 import ProfilePage from './pages/ProfilePage';
 import UpdateProfilePage from './pages/UpdateProfilePage';
 import TestPage from "./pages/TestPage";
+import TestFormPage from "./pages/TestFormPage";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
          <Route path="/profile/:Id" element={ <ProfilePage />} />
          <Route path="/update-profile" element={ <UpdateProfilePage />} />
          <Route path="/test-page" element={ <TestPage />} />
+         <Route path="/test-form" element={ <TestFormPage />} />
          <Route path='*' element={<ErrorPage />} />
       </Routes>
     </div>

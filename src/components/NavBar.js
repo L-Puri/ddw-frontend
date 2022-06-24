@@ -40,6 +40,7 @@ function NavBar () {
             <li><a href="/random-goal">Random Goal</a></li>
             <li><a href="/" onClick={logOutUser}>Logout</a></li>
             <li><a href="/test-page">Test Page</a></li>
+            <li><a href="/test-form">Test Form</a></li>
             <li><a href="/fgladfghl">Error Page</a></li>
         </ul>
     </div>
