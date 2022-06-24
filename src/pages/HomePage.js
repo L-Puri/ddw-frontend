@@ -1,7 +1,12 @@
 import React from 'react'
-import DdwLogo from '../images/DDW-Logo.png'
 import axios from 'axios'
 import {useState} from 'react'
+import { Link, useNavigate } from "react-router-dom" // new
+
+
+
+
+const API_URL = "http://localhost:5005" // new
 
 function HomePage() {
   
@@ -17,7 +22,7 @@ function HomePage() {
       password
     }
     let responseAxios = await axios.post("http://localhost:5005/auth/signup", newUser)
-    //createUser(values)
+    // navigate ('/profilePage')
   }
   
   const handleChange = event => {
@@ -34,10 +39,10 @@ function HomePage() {
   
   return (
     <div>
-        <h1>HomePage</h1>
+        <h1 className='page-title'>Don't Die Without... HomePage</h1>
         <p>this should be displayed with the URL "/" !!!</p>
 
-{/* new form */}
+{/* new form: signup */}
 {/* use conditional rendering: default: login form, a link should rerender to signup */}
 
 
@@ -76,11 +81,14 @@ function HomePage() {
       <button type="submit">Become a Member</button>
     </form>
 
+    {/* new form: login */}
+    <h2>Login Form</h2>
+    {/* <Login /> */}
 
 
 
       
-{/* input ends */}
+
         
     </div>
   )

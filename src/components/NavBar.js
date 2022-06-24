@@ -1,14 +1,23 @@
+import React from 'react';
+import DDWLogo from '../images/DDW-Logo.png'
+import { useContext } from "react";                                 // new 
+//import { AuthContext } from "./components/context/auth.context";  // new
+
 
 function NavBar () {
+    //const { isLoggedIn, user } = useContext(AuthContext); // new
     return (
         
+        // inside this navbar, we need to decide which links are displaying while being logged in/out
+        // {isLoggedIn && (links)} most pages
+        // {!isLoggedIn && (links)} sign up / login?
 <nav class="navbar">
-    <div class="brand-title">
+    <div class="brand-logo">
     <a href="/">
         <img
-        src={DdwLogo}
+        src={DDWLogo}
         alt="DDW Logo"
-        margin-left="10"
+        margin-left="5"
         height="35"
         loading="lazy"
         />
@@ -23,7 +32,7 @@ function NavBar () {
     <div class="navbar-links">
         <ul>
             <li><a href="/">Signup</a></li>
-            <li><a href="/">Login</a></li>
+            <li><a href="/login">Login</a></li>
             <li><a href="/profile">My Bucket</a></li>
             <li><a href="/random-goal">Random Goal</a></li>
             <li><a href="/">Logout</a></li>

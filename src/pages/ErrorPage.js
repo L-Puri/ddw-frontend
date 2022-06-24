@@ -4,7 +4,7 @@ import ErrorImage from '../images/error_404.png'
 function ErrorPage() {
   return (
     
-    <div className='error-message'><img src={ErrorImage}
+    <div><img className="error-message" src={ErrorImage}
     alt="404 error message" />
     </div>
   )
