@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import NavBar from './components/NavBar'
+import IsPrivate from './components/IsPrivate'
 
 import './App.css';
 // import Axios from "axios";
@@ -14,6 +15,7 @@ import ProfilePage from './pages/ProfilePage';
 import UpdateProfilePage from './pages/UpdateProfilePage';
 import TestPage from "./pages/TestPage";
 
+
 function App() {
   return (
     <div>
@@ -21,8 +23,9 @@ function App() {
       <Routes>
          <Route path="/" element={ <HomePage />} />
          <Route path="/login" element={ <LoginPage />} />
-         <Route path="/create-entry" element={ <CreateEntryPage />} />
-          {/* create dynamic routing for the following: */}
+         {/* working example of protected route: */}
+         <Route path="/create-entry" element={<IsPrivate> <CreateEntryPage/> </IsPrivate> } />                 
+          {/* create dynamic routing for the following!!! */}
          <Route path="/details/:Id" element={ <DetailsPage />} />
          <Route path="/profile/:Id" element={ <ProfilePage />} />
          <Route path="/update-profile" element={ <UpdateProfilePage />} />

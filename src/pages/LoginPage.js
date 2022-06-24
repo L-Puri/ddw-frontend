@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from '../context/auth.context' // new
+import { AuthContext } from '../context/auth.context' 
 
 const API_URL = "http://localhost:5005";
 
@@ -13,7 +13,7 @@ function LoginPage(props) {
     
     const navigate = useNavigate();
 
-    const { storeToken } = useContext(AuthContext) //new
+    const { storeToken, authenticateUser } = useContext(AuthContext) //new
    
     const handleEmail = (e) => setEmail(e.target.value);
     const handlePassword = (e) => setPassword(e.target.value);
@@ -21,13 +21,13 @@ function LoginPage(props) {
     const handleLoginSubmit = (e) => {
         e.preventDefault();
         const requestBody = { email, password };
-        //console.log(requestBody) 
-        axios.post(`${API_URL}/auth/login`, requestBody)
-        
-        .then((response) => {
-        console.log('JWT token', response.data.authToken );
-        storeToken(response.data.authToken);
-        navigate('/profile/asdwd');                            
+
+    axios.post(`${API_URL}/auth/login`, requestBody)
+      .then((response) => {
+      console.log('JWT token', response.data.authToken );
+      storeToken(response.data.authToken);
+      authenticateUser()
+      navigate('/profile/asdwd');                            
                 
       })
       .catch((error) => {

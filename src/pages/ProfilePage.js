@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function ProfilePage() {
   return (
-    <div>
+    <div className="profile-page">
       <div>
       <h1>Profile Page</h1>
       {/* <img src={url} alt=" " className=" " /> */}

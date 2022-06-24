@@ -1,11 +1,15 @@
 import React from 'react';
 import DDWLogo from '../images/DDW-Logo.png'
-import { useContext } from "react";                                 // new 
-//import { AuthContext } from "./components/context/auth.context";  // new
-
+import { useContext } from "react";                                 
+import { AuthContext } from '../context/auth.context' 
 
 function NavBar () {
-    //const { isLoggedIn, user } = useContext(AuthContext); // new
+    const {                 // new
+        isLoggedIn, 
+        user,  
+        logOutUser 
+    } = useContext(AuthContext); 
+
     return (
         
         // inside this navbar, we need to decide which links are displaying while being logged in/out
@@ -34,12 +38,10 @@ function NavBar () {
             <li><a href="/login">Login</a></li>
             <li><a href="/profile">My Bucket</a></li>
             <li><a href="/random-goal">Random Goal</a></li>
-            <li><a href="/">Logout</a></li>
+            <li><a href="/" onClick={logOutUser}>Logout</a></li>
             <li><a href="/test-page">Test Page</a></li>
             <li><a href="/fgladfghl">Error Page</a></li>
         </ul>
-        {/* <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
-        <button id="close-menu-btn"><i class="uil uil-multiply"></i></button> */}
     </div>
 </nav>
 
