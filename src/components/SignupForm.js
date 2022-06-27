@@ -50,7 +50,7 @@ function SignupForm() {
                 Already have an account?
               </span>
 
-              <a className="txt2" href="#">
+              <a className="txt2" href="http://localhost:3000/login">
                 Login
               </a>
             </div>

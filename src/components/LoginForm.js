@@ -45,7 +45,7 @@ function LoginForm() {
                  You're not a member?
               </span>
 
-              <a className="txt2" href="#">
+              <a className="txt2" href="/">
                 Sign Up
               </a>
             </div>

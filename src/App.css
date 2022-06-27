@@ -279,13 +279,41 @@ h1 {
   background-repeat: no-repeat;
 }
 
-.title-test {
-  margin-top: 50px;
-  margin-left: 10px;
-  position: absolute;
-  color: #1BA098;
-  text-shadow: 1px 1px 5px #A9A9AC;
+.div-intro-texts {
+  width: 560px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: space-between;
+  position: fixed;
+  gap: 10px;
+  border: 5px solid rgb(47, 255, 0);
+}
 
+
+.title-test {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: bolder;
+  margin-top: 50px;
+  margin-left: 130px;
+  position: absolute;
+  color: #7DA2A9;
+  /* text-shadow: 1px 1px 1px #1BA098; */
+  border: 1px solid red;
+
+}
+
+.title-text {
+  font-family: 'Syne', sans-serif;
+  font-weight: bolder;
+  margin-top: 100px;
+  margin-left: 10px;
+  font-size: 55px;
+  position: absolute;
+  color: #FDF5DF;
+  text-shadow: 2px 2px 5px #A9A9AC;
+  border: 1px solid blue;
 }
 
 .bcg-homepage {

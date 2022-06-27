@@ -11,12 +11,8 @@ function NavBar () {
     } = useContext(AuthContext); 
 
     return (
-        
-        // inside this navbar, we need to decide which links are displaying while being logged in/out
-        // {isLoggedIn && (links)} most pages
-        // {!isLoggedIn && (links)} sign up / login?
-<nav class="navbar">
-    <div class="brand-logo">
+<nav className="navbar">
+    <div className="brand-logo">
     <a href="/">
         <img
         src={DDWLogo}
@@ -27,10 +23,10 @@ function NavBar () {
     </a>
     <p id="brand-name">Don't Die Without...</p>
     </div>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        <a href="http://localhost:3000/login" className="toggle-button">
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
         </a>
     <div class="navbar-links">
         <ul>

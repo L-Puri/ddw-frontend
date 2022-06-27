@@ -37,7 +37,6 @@ function AuthProviderWrapper(props) {
         setUser(null);        
       });      
     } else {
-      // If the token is not available (or is removed)
         setIsLoggedIn(false);
         setIsLoading(false);
         setUser(null);      
