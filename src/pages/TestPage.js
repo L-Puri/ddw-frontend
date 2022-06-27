@@ -1,6 +1,6 @@
 import React from 'react'
-import SignupForm from '../components/SignupForm'
-import GenButton from '../components/Button'
+// import SignupForm from '../components/SignupForm'
+// import GenButton from '../components/Button'
 import LoginForm from '../components/LoginForm'
 
 

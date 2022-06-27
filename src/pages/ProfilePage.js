@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import EntryCard from '../components/EntryCard'
 import UserDetails from "../components/UserDetails"
-
+import LogoutButton from "../components/LogoutButton"
 
 function ProfilePage(props) {
   return (
@@ -11,6 +11,7 @@ function ProfilePage(props) {
       <h1>Profile Page</h1>
       <h2>User Details</h2>
       <UserDetails />
+      <LogoutButton />
      
 
 

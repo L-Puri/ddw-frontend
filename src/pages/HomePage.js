@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 // import SignupForm from '../components/SignupForm'
 
 function HomePage() {
-  
   const [username, setUsername] =  useState(" ")
   const [email, setEmail] =  useState(" ")
   const [password, setPassword] =  useState(" ")  
@@ -35,18 +34,9 @@ function HomePage() {
   }
   }
   
-  
   return (
     <div>
         <h1 className='page-title'>Don't Die Without... HomePage</h1>
-        
-        
-
-{/* new form: signup */}
-{/* use conditional rendering: default: login form, a link should rerender to signup */}
-{/* <SignupForm /> */}
-
-
 <h2>signup form</h2>
 <form className ="form" onSubmit={(e) => {handleSubmit(e)}}>
       <div>
@@ -80,24 +70,10 @@ function HomePage() {
         />
       </div>
       <button type="submit">Become a Member</button>
-    </form>
-
-    {/* new form: login */}
-    <h2>Login Form</h2>
-    {/* <Login /> */}
-
-
-
-      
-
-        
+    </form>  
     </div>
   )
 
   
 }
-
-
-
-
 export default HomePage
