@@ -2,25 +2,20 @@ import React from 'react'
 import DDWText from '../images/DDW-Text.png'
 
 
-function SignupForm() {
+function LoginForm() {
   return (
     <div className="signup-container">
       <div className="wrap-login100">
-          <form className="login100-form validate-form">
+          <form className="login100-form validate-form" >
             <div className='logo-container'>
               <img className="logo-text" src={DDWText}
       alt="Don't Die Without logo" />
               <span className="login100-form-title p-b-26">
-                Sign Up
+                Login
               </span>
               <span className="login100-form-title p-b-48">
                 <i className="zmdi zmdi-font"></i>
               </span>
-            </div>
-
-            <div className="wrap-input100 validate-input">
-              <input className="input100" type="text" name="username" />
-              <span className="focus-input100" data-placeholder="Username"></span>
             </div>
 
             <div className="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
@@ -40,18 +35,18 @@ function SignupForm() {
               <div className="wrap-login100-form-btn">
                 <div className="login100-form-bgbtn"></div>
                 <button className="login100-form-btn">
-                  Sign Up
+                  Login
                 </button>
               </div>
             </div>
 
             <div className="text-center p-t-115">
               <span className="txt1">
-                Already have an account?
+                 You're not a member?
               </span>
 
               <a className="txt2" href="#">
-                Login
+                Sign Up
               </a>
             </div>
           </form>
@@ -60,4 +55,4 @@ function SignupForm() {
   )
 }
 
-export default SignupForm
+export default LoginForm

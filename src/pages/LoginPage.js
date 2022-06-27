@@ -27,13 +27,14 @@ function LoginPage(props) {
       console.log('JWT token', response.data.authToken );
       storeToken(response.data.authToken);
       authenticateUser()
-      navigate('/profile/asdwd');                            
+      navigate('/profile');                            
                 
       })
       .catch((error) => {
         console.log(error)
-        const errorDescription = error.response.data.message;
-        setErrorMessage(errorDescription);
+        
+        // const errorDescription = error.response.data.message;
+        // setErrorMessage(errorDescription);
       })
 
     };

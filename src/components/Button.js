@@ -1,17 +1,18 @@
 import React from 'react'
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 
-function Button() {
+function GenButton() {
   return (
     <div>
-      <Stack spacing={2} direction="row">
-      <Button variant="text">Text</Button>
-      <Button variant="contained">Contained</Button>
-      <Button variant="outlined">Outlined</Button>
-    </Stack>
+      <div className="container-gen-btn">
+        <div className="div-gen-btn">
+            <div className="gen-btn"></div>
+                <button className="text-gen-btn">
+                  Button
+                </button>
+        </div>
+      </div>
     </div>
   )
 }
 
-export default Button
+export default GenButton

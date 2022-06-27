@@ -4,7 +4,6 @@ import NavBar from './components/NavBar'
 import IsPrivate from './components/IsPrivate'
 
 import './App.css';
-// import Axios from "axios";
 
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
@@ -28,7 +27,7 @@ function App() {
          <Route path="/create-entry" element={<IsPrivate> <CreateEntryPage/> </IsPrivate> } />                 
           {/* create dynamic routing for the following!!! */}
          <Route path="/details/:Id" element={ <DetailsPage />} />
-         <Route path="/profile/:Id" element={ <ProfilePage />} />
+         <Route path="/profile" element={ <ProfilePage />} />
          <Route path="/update-profile" element={ <UpdateProfilePage />} />
          <Route path="/test-page" element={ <TestPage />} />
          <Route path="/test-form" element={ <TestFormPage />} />

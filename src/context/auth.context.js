@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { createContext } from "react";
 
+
 const API_URL = "http://localhost:5005";
  
 const AuthContext = createContext();
@@ -15,7 +16,7 @@ function AuthProviderWrapper(props) {
     localStorage.setItem('authToken', token);
   }
 
-  const authenticateUser = () => {                         // new from here on
+  const authenticateUser = () => {                       
     const storedToken = localStorage.getItem('authToken');
 
     if (storedToken) {
@@ -30,8 +31,7 @@ function AuthProviderWrapper(props) {
         setUser(user);        
       })
       .catch((error) => {
-        // If the server sends an error response (invalid token) 
-        // Update state variables         
+              
         setIsLoggedIn(false);
         setIsLoading(false);
         setUser(null);        
@@ -58,8 +58,6 @@ function AuthProviderWrapper(props) {
     authenticateUser(); 
   }, []);
 
-  
-              //  OLD, but working code
   return (
     <AuthContext.Provider value={{ 
       isLoggedIn, 

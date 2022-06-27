@@ -270,8 +270,13 @@ h1 {
 
 
 /* ========== Test Page ========== */
-.container {
+.container-background {
+  width: 100vw;
+  height: 100vh;
   position: relative;
+  background-image: url('../src/images/homepage-bcg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .title-test {
@@ -287,12 +292,119 @@ h1 {
   align-items: center;
   max-width: 100vw;
   height: auto;
+  /* z-index: 1; */
 }
 
 .profile-page {
   background-color: #FDF5DF;
   text-align: center;
 }
+
+.container-form {
+  border: 5px solid red;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5%;
+}
+
+/* ========== Bucket List Card Entry ========== */
+
+/* Card */
+.entry-card {
+border: 2px solid #1BA098;
+}
+
+/* Card Title */
+.card-title-text {
+  font-family: 'Syne', sans-serif;
+}
+
+/* Button */
+.card-btn {
+  background: #7DA2A9;
+  border-radius: 25px;
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: bolder;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.card-btn:hover {
+  background: #1BA098; /* ----> colour of the button when hovering*/
+}
+
+
+/* ========== Gen Button ========== */
+
+.container-gen-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 15px; /* ----> padding size of container div */
+}
+
+.div-gen-btn {
+  width: 120px; /* ----> width of the button*/
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 25px; /* ----> radius of the corners */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.gen-btn {
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  height: 100%;
+  background: #7DA2A9; /* ----> colour of the button */
+  /* background: -webkit-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+  background: -o-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+  background: -moz-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+  background: linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+  top: 0; */
+  left: -100%;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.text-gen-btn {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: bolder;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 40px; /* ----> height of the button (don't really understand why it's placed here */
+}
+
+.text-gen-btn:hover {
+  background: #1BA098; /* ----> colour of the button when hovering*/
+}
+
+/* .div-gen-btn:hover .gen-btn {
+  left: 0;
+} */
 
 /* ========== CCS2 FORM ========== */
 
@@ -435,6 +547,11 @@ iframe {
   border: 2px solid red; 
 } */
 
+.signup-container {
+  z-index: 2;
+  position: absolute;
+}
+
 
 .wrap-login100 {
   align-content: center;
@@ -444,8 +561,7 @@ iframe {
   overflow: hidden;
   padding: 0px 55px 33px 55px;
   border: 3px solid #1BA098;
-  margin-top: 10%;
-  margin-left: 60%;
+  margin-top: 20%;
 
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
@@ -609,7 +725,8 @@ iframe {
 
 
 /*------------------------------------------------------------------
-[ Button ]*/
+[ Button Sign Up]*/
+
 .container-login100-form-btn {
   display: -webkit-box;
   display: -webkit-flex;

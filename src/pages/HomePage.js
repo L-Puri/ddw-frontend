@@ -4,10 +4,6 @@ import {useState} from 'react'
 import { useNavigate } from "react-router-dom";
 // import SignupForm from '../components/SignupForm'
 
-
-
-
-
 const API_URL = "http://localhost:5005" // new
 
 function HomePage() {

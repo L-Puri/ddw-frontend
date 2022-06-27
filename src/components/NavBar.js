@@ -37,6 +37,7 @@ function NavBar () {
             <li><a href="/">Signup</a></li>
             <li><a href="/login">Login</a></li>
             <li><a href="/profile">My Bucket</a></li>
+            <li><a href="/entry-details">Details</a></li>
             <li><a href="/random-goal">Random Goal</a></li>
             <li><a href="/" onClick={logOutUser}>Logout</a></li>
             <li><a href="/test-page">Test Page</a></li>
