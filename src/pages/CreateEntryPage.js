@@ -3,9 +3,11 @@ import CreateEntryForm from "../components/CreateEntryForm"
 
 function CreateEntryPage() {
   return (
-    <div>
-        <h1>Create an entry for your bucket list</h1>
-        <CreateEntryForm />
+    <div className="create-entry-page-div">
+        <h1 className='create-entry-page-title'>Create an entry for your bucket list</h1>
+        <div className='create-entry-form-div'>
+          <CreateEntryForm />
+        </div>
     </div>
   )
 }

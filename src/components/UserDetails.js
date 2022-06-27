@@ -9,7 +9,7 @@ function UserDetails() {
   return (
     <div>
 
-        <p>welcome, {user?.username}</p>
+        <h1 className="welcome-message">This is your Profile page, {user?.username}</h1>
     </div>
   )
 }

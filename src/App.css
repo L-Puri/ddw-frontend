@@ -340,6 +340,7 @@ h1 {
 /* Card */
 .entry-card {
 border: 2px solid #1BA098;
+border-radius: 10%;
 }
 
 /* Card Title */
@@ -363,6 +364,407 @@ border: 2px solid #1BA098;
   background: #1BA098; /* ----> colour of the button when hovering*/
 }
 
+
+/* ========== Profile Page ========== */
+
+.profile-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.user-details-div {
+  flex: 20%;
+  border: 1px solid red;
+}
+
+.bucket-list-div {
+  flex: 60%;
+  border: 1px solid red;
+}
+
+.list-friends-div {
+  flex: 20%;
+  border: 1px solid red;
+  padding: none;
+}
+
+.user-details-title {
+  font-family: 'Syne', sans-serif;
+}
+
+.welcome-message {
+  font-family: 'Syne', sans-serif;
+}
+
+.bucket-list-title {
+  font-family: 'Syne', sans-serif;
+}
+
+.friends-list-title {
+  font-family: 'Syne', sans-serif;
+}
+
+/* ========== Profile Buttons ========== */
+
+.profile-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 10px;
+
+}
+
+/* Logout Button*/
+.container-logout-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 15px; /* ----> padding size of container div */
+}
+
+.div-logout-btn {
+  width: 120px; /* ----> width of the button*/
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 25px; /* ----> radius of the corners */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.logout-btn {
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  height: 100%;
+  background: #7DA2A9; /* ----> colour of the button */
+  left: -100%;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.text-logout-btn {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: bolder;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 40px; /* ----> height of the button (don't really understand why it's placed here */
+}
+
+.text-logout-btn:hover {
+  background: #1BA098; /* ----> colour of the button when hovering*/
+}
+
+/* Update Profile Button*/
+.container-update-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 15px; /* ----> padding size of container div */
+}
+
+.div-update-btn {
+  width: 120px; /* ----> width of the button*/
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 25px; /* ----> radius of the corners */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.update-btn {
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  height: 100%;
+  background: #7DA2A9; /* ----> colour of the button */
+  left: -100%;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.text-update-btn {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: bolder;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 40px; /* ----> height of the button (don't really understand why it's placed here */
+}
+
+.text-update-btn:hover {
+  background: #1BA098; /* ----> colour of the button when hovering*/
+}
+
+/*Delete Button*/
+.container-delete-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 15px; /* ----> padding size of container div */
+}
+
+.div-delete-btn {
+  width: 120px; /* ----> width of the button*/
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 25px; /* ----> radius of the corners */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.delete-btn {
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  height: 100%;
+  background: #7DA2A9; /* ----> colour of the button */
+  left: -100%;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.text-delete-btn {
+  font-family: 'Syne', sans-serif;
+  font-size: 100%;
+  font-weight: bolder;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 40px; /* ----> height of the button (don't really understand why it's placed here */
+}
+
+.text-delete-btn:hover {
+  background: #1BA098; /* ----> colour of the button when hovering*/
+}
+
+/*Create Entry Button*/
+.container-add-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 15px; /* ----> padding size of container div */
+  padding-bottom: 15px;
+}
+
+.div-add-btn {
+  width: 120px; /* ----> width of the button*/
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 25px; /* ----> radius of the corners */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.add-btn {
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  height: 100%;
+  background: #7DA2A9; /* ----> colour of the button */
+  left: -100%;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.text-add-btn {
+  font-family: 'Syne', sans-serif;
+  font-size: 100%;
+  font-weight: bolder;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 40px; /* ----> height of the button (don't really understand why it's placed here */
+}
+
+.text-add-btn:hover {
+  background: #1BA098; /* ----> colour of the button when hovering*/
+}
+
+/*See Profile Details Button*/
+.container-details-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 15px; /* ----> padding size of container div */
+}
+
+.div-details-btn {
+  width: 120px; /* ----> width of the button*/
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 25px; /* ----> radius of the corners */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.details-btn {
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  height: 100%;
+  background: #7DA2A9; /* ----> colour of the button */
+  left: -100%;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.text-details-btn {
+  font-family: 'Syne', sans-serif;
+  font-size: 100%;
+  font-weight: bolder;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 40px; /* ----> height of the button (don't really understand why it's placed here */
+}
+
+.text-details-btn:hover {
+  background: #1BA098; /* ----> colour of the button when hovering*/
+}
+
+/* Personal Bucket List */
+.bucket-list-card-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  border: 2px solid rgb(255, 0, 255);
+}
+
+/* List of Friends */
+.list-group {
+  margin: none;
+  border: 2px solid rgb(255, 0, 255);
+  padding: 10px;
+}
+
+.list-group-item {
+  list-style: none;
+  margin-bottom: 5px;
+  border: 1px solid blue;
+}
+
+.friend-box-div {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  border: 1px solid black;
+}
+
+.friend-photo {
+  width: 80px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.friend-description {
+  font-family: 'Syne', sans-serif;
+  width: 100%;
+  align-content: flex-start;
+  border: 1px solid black;
+}
+
+.friend-name {
+  font-size: 20px;
+  color: #1BA098;
+}
 
 /* ========== Gen Button ========== */
 
@@ -434,19 +836,69 @@ border: 2px solid #1BA098;
   left: 0;
 } */
 
-/* ========== CCS2 FORM ========== */
+.container-gen-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 15px; /* ----> padding size of container div */
+}
 
-/* a {
-	font-family: 'Roboto';
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
+.div-gen-btn {
+  width: 120px; /* ----> width of the button*/
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 25px; /* ----> radius of the corners */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.gen-btn {
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  height: 100%;
+  background: #7DA2A9; /* ----> colour of the button */
+  /* background: -webkit-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+  background: -o-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+  background: -moz-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+  background: linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+  top: 0; */
+  left: -100%;
+
+  -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
-}*/
+  transition: all 0.4s;
+}
+
+.text-gen-btn {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: bolder;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 40px; /* ----> height of the button (don't really understand why it's placed here */
+}
+
+.text-gen-btn:hover {
+  background: #1BA098; /* ----> colour of the button when hovering*/
+}
 
 /*------------------- Logo --------------------------*/
 
@@ -902,4 +1354,21 @@ iframe {
     visibility: visible;
     opacity: 1;
   }
+}
+
+/* ========== Create Experience FORM Page ========== */
+
+.create-entry-page-div {
+  font-family: 'Syne', sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.create-entry-page-title {
+  font-family: 'Syne', sans-serif;
+}
+
+.create-entry-container {
+  margin: none;
 }

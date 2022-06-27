@@ -2,7 +2,7 @@ import React from 'react'
 import { AuthContext } from "../context/auth.context";
 import { useContext } from "react";
 
-function LogoutButton() {
+function AddEntry() {
 
   const {
     isLoggedIn,
@@ -12,11 +12,11 @@ function LogoutButton() {
 
   return (
     <div>
-      <div className="container-logout-btn">
-        <div className="div-logout-btn">
-            <div className="logout-btn"></div>
-                <button className="text-logout-btn" to="/" onClick={logOutUser}>
-                  Logout
+      <div className="container-add-btn">
+        <div className="div-add-btn">
+            <div className="add-btn"></div>
+                <button className="text-add-btn" src="/create-entry">
+                  Add Entry
                 </button>
         </div>
       </div>
@@ -24,4 +24,4 @@ function LogoutButton() {
   )
 }
 
-export default LogoutButton
+export default AddEntry
