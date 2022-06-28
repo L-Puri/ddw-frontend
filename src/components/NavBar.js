@@ -28,7 +28,7 @@ function NavBar() {
       <div class="navbar-links">
         <ul>
           <li>
-            <Link to="/">Signup </Link>
+            <Link to="/signup">Signup </Link>
           </li>
           <li>
             <Link to="/login">Login</Link>
@@ -37,7 +37,7 @@ function NavBar() {
             <Link to="/profile">My Bucket</Link>
           </li>
           <li>
-            <Link to="/entry-details">Details</Link>
+            <Link to="/details/:Id">Details</Link>
           </li>
           <li>
             <Link to="/random-goal">Random Goal</Link>
@@ -50,12 +50,12 @@ function NavBar() {
               Logout
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/test-page">Test Page</Link>
           </li>
-          <li>
+           <li>
             <Link to="/test-form">Test Form</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/fgladfghl">Error Page</Link>
           </li>

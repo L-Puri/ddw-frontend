@@ -2,10 +2,6 @@ html {
   background-color: #FDF5DF;
 }
 
-/*.App {
-  text-align: center;
-}*/
-
 /* ========== NavBar ========== */
 
 .navbar {
@@ -128,23 +124,80 @@ html {
 
 /* ========== HomePage ========== */
 
-h1 {
-  font-family: 'Permanent Marker', cursive;
-/*font-family: 'Roboto', sans-serif;*/
+.homepage-div {
+  margin-top: 50px;
 }
 
-.page-title {
+/* .page-title {
   font-family: 'Permanent Marker', cursive;
-  /*position: absolute;*/
+} */
+
+.container-background {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url('../src/images/homepage-bcg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-/* ========== Error 404 Page ========== */
+.div-intro-texts {
+  width: 560px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: space-between;
+  position: fixed;
+  gap: 10px;
+  /* border: 5px solid rgb(47, 255, 0); */
+}
 
-.error-message {
+.title-text {
+  font-family: 'Syne', sans-serif;
+  font-weight: bolder;
+  margin-top: 100px;
+  margin-left: 10px;
+  font-size: 55px;
+  position: absolute;
+  color: #121212;
+  text-shadow: 2px 2px 5px #A9A9AC;
+  /* border: 1px solid blue; */
+}
+
+.bcg-homepage {
   align-items: center;
   max-width: 100vw;
   height: auto;
-  
+}
+
+/* ========== SignUp Page ========== */
+.signup-page-div {
+  margin-top: 50px;
+}
+
+.signup-form-div {
+  margin-left: 2px;
+  margin-right: 2px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ========== Login Page ========== */
+.login-page-div {
+  margin-top: 50px;
+}
+
+.login-form-div {
+  margin-left: 2px;
+  margin-right: 2px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ========== Login Page ========== */
+.details-page-div {
+  margin-top: 50px;
 }
 
 /* ========== Forms ========== */
@@ -268,60 +321,8 @@ h1 {
   color: inherit;
 }
 
-
 /* ========== Test Page ========== */
-.container-background {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  background-image: url('../src/images/homepage-bcg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
-.div-intro-texts {
-  width: 560px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-content: space-between;
-  position: fixed;
-  gap: 10px;
-  border: 5px solid rgb(47, 255, 0);
-}
-
-
-.title-test {
-  font-family: 'Permanent Marker', cursive;
-  font-weight: bolder;
-  margin-top: 50px;
-  margin-left: 130px;
-  position: absolute;
-  color: #7DA2A9;
-  /* text-shadow: 1px 1px 1px #1BA098; */
-  border: 1px solid red;
-
-}
-
-.title-text {
-  font-family: 'Syne', sans-serif;
-  font-weight: bolder;
-  margin-top: 100px;
-  margin-left: 10px;
-  font-size: 55px;
-  position: absolute;
-  color: #FDF5DF;
-  text-shadow: 2px 2px 5px #A9A9AC;
-  border: 1px solid blue;
-}
-
-.bcg-homepage {
-  align-items: center;
-  max-width: 100vw;
-  height: auto;
-  /* z-index: 1; */
-}
 
 .profile-page {
   background-color: #FDF5DF;
@@ -565,7 +566,7 @@ border-radius: 10%;
   z-index: -1;
   width: 300%;
   height: 100%;
-  background: #7DA2A9; /* ----> colour of the button */
+  background: tomato; /* ----> colour of the button */
   left: -100%;
 
   -webkit-transition: all 0.4s;
@@ -595,7 +596,7 @@ border-radius: 10%;
 }
 
 .text-delete-btn:hover {
-  background: #1BA098; /* ----> colour of the button when hovering*/
+  background: rgb(250, 39, 2); /* ----> colour of the button when hovering*/
 }
 
 /*Create Entry Button*/
@@ -642,6 +643,7 @@ border-radius: 10%;
   color: #fff;
   line-height: 1.2;
   text-transform: uppercase;
+  
 
   display: -webkit-box;
   display: -webkit-flex;
@@ -1371,4 +1373,13 @@ iframe {
 
 .create-entry-container {
   margin: none;
+}
+
+/* ========== Error 404 Page ========== */
+
+.error-message {
+  align-items: center;
+  max-width: 100vw;
+  height: auto;
+  
 }

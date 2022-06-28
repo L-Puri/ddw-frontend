@@ -7,6 +7,7 @@ import './App.css';
 
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
+import SignUpPage from './pages/SignupPage';
 import ErrorPage from './pages/ErrorPage';
 import DetailsPage from './pages/DetailsPage';
 import CreateEntryPage from './pages/CreateEntryPage';
@@ -23,6 +24,7 @@ function App() {
       <Routes>
          <Route path="/" element={ <HomePage />} />
          <Route path="/login" element={ <LoginPage />} />
+         <Route path="/signup" element={ <SignUpPage />} />
          {/* working example of protected route: */}
          <Route path="/create-entry" element={<IsPrivate> <CreateEntryPage/> </IsPrivate> } />                 
           {/* create dynamic routing for the following!!! */}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import EntryCard from '../components/EntryCard'
 import UserDetails from "../components/UserDetails"
 import ProfileDetailsButton from '../components/ProfileDetailsButton';

@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from '../context/auth.context' 
+import { AuthContext } from '../context/auth.context'
+import LoginForm from "../components/LoginForm";
 
 const API_URL = "http://localhost:5005";
 
@@ -40,8 +41,8 @@ function LoginPage(props) {
     };
     
     return (
-      <div className="Login">
-        <h1 className="page-title">Login</h1>
+      <div className="login-page-div">
+        {/* <h1 className="page-title">Login</h1>
    
         <form onSubmit={handleLoginSubmit}>
           <label>Email:</label>
@@ -62,8 +63,10 @@ function LoginPage(props) {
    
           <button type="submit">Login</button>
         </form>
-        { errorMessage && <p className="error-message">{errorMessage}</p> }
-   
+        { errorMessage && <p className="error-message">{errorMessage}</p> } */}
+      <div className="login-form-div">
+        <LoginForm />
+      </div>
       </div>
     )
 }

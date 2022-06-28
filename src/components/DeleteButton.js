@@ -1,6 +1,7 @@
 import React from 'react'
 import { AuthContext } from "../context/auth.context";
 import { useContext } from "react";
+import DeleteModal from './DeleteModal';
 
 function DeleteButton() {
 
@@ -14,13 +15,13 @@ function DeleteButton() {
     <div>
       <div className="container-delete-btn">
         <div className="div-delete-btn">
-            <div className="delete-btn"></div>
+          <div className="delete-btn"></div>
                 <button className="text-delete-btn" to="/" onClick={logOutUser}>
                   Delete
                 </button>
+          </div>
         </div>
       </div>
-    </div>
   )
 }
 

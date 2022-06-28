@@ -1,6 +1,7 @@
 import React from 'react'
 import { AuthContext } from "../context/auth.context";
 import { useContext } from "react";
+import  { Link }  from "react-router-dom";
 
 function AddEntry() {
 
@@ -15,8 +16,9 @@ function AddEntry() {
       <div className="container-add-btn">
         <div className="div-add-btn">
             <div className="add-btn"></div>
-                <button className="text-add-btn" src="/create-entry">
-                  Add Entry
+                <button className="text-add-btn" >
+                  <Link to="/create-entry">Add Entry</Link>
+                
                 </button>
         </div>
       </div>
