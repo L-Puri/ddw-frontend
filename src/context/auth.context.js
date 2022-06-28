@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { createContext } from "react";
 
-
 const API_URL = "http://localhost:5005";
  
 const AuthContext = createContext();
@@ -12,7 +11,10 @@ function AuthProviderWrapper(props) {
   const [isLoading, setIsLoading] = useState(true);
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
+  //new: enable update from child components (experiences):
+  const [experiences, setExperiences] = useState([])
 
+ 
 
   const storeToken = (newToken) => {       
     localStorage.setItem('authToken', newToken);
@@ -57,9 +59,15 @@ function AuthProviderWrapper(props) {
     authenticateUser();
   }  
 
+  //  function
+  //  axios get request to experiences
+  //  setstate
+  //  storestate
+  //  done
 
   useEffect(() => {                                                
     authenticateUser(); 
+    // function
   }, []);
 
   return (
@@ -70,7 +78,8 @@ function AuthProviderWrapper(props) {
       storeToken,
       token,
       authenticateUser,
-      logOutUser 
+      logOutUser,
+      experiences
       }}
       >
       {props.children}

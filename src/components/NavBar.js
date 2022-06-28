@@ -53,12 +53,12 @@ function NavBar() {
           {/* <li>
             <Link to="/test-page">Test Page</Link>
           </li>
-           <li>
+          <li>
             <Link to="/test-form">Test Form</Link>
           </li> */}
-          <li>
+          {/* <li>
             <Link to="/fgladfghl">Error Page</Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

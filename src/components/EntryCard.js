@@ -28,7 +28,7 @@ function EntryCard() {
         An activity similar to extreme sports when it is performed as part of a dive, it allows people to get close to these large predators and generates strong sensations.
         </Text>
 
-        <Button className="card-btn" href="/entry-details" variant="light" color="blue" fullWidth style={{ marginTop: 14 }}>
+        <Button className="card-btn" to="/details/:Id" variant="light" color="blue" fullWidth style={{ marginTop: 14 }}>
           See More Details!
         </Button>
       </Card>
