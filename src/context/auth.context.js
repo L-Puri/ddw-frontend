@@ -68,7 +68,7 @@ function AuthProviderWrapper(props) {
     )
     .then((response) => {
       console.log("this users experiences from db:", response.data)
-      setExperiences(response)
+      setExperiences(response.data)
     })    
   } 
 

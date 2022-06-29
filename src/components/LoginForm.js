@@ -8,7 +8,6 @@ const API_URL = "http://localhost:5005";
 
 function LoginForm() {
 
-  {/*Imported from Login Page Form*/}
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(undefined);
@@ -39,61 +38,8 @@ function LoginForm() {
     })
 
   };
-  {/*End of import*/}
-
 
   return (
-    // ORIGINAL FORM
-    // <div className="signup-container">
-    //   <div className="wrap-login100">
-    //       <form className="login100-form validate-form" >
-    //         <div className='logo-container'>
-    //           <img className="logo-text" src={DDWText}
-    //   alt="Don't Die Without logo" />
-    //           <span className="login100-form-title p-b-26">
-    //             Login
-    //           </span>
-    //           <span className="login100-form-title p-b-48">
-    //             <i className="zmdi zmdi-font"></i>
-    //           </span>
-    //         </div>
-
-    //         <div className="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-    //           <input className="input100" type="text" name="email" />
-    //           <span className="focus-input100" data-placeholder="Email"></span>
-    //         </div>
-
-    //         <div className="wrap-input100 validate-input" data-validate="Enter password">
-    //           <span className="btn-show-pass">
-    //             <i className="zmdi zmdi-eye"></i>
-    //           </span>
-    //           <input className="input100" type="password" name="pass" />
-    //           <span className="focus-input100" data-placeholder="Password"></span>
-    //         </div>
-
-    //         <div className="container-login100-form-btn">
-    //           <div className="wrap-login100-form-btn">
-    //             <div className="login100-form-bgbtn"></div>
-    //             <button className="login100-form-btn">
-    //               Login
-    //             </button>
-    //           </div>
-    //         </div>
-
-    //         <div className="text-center p-t-115">
-    //           <span className="txt1">
-    //              You're not a member?
-    //           </span>
-
-    //           <a className="txt2" href="/">
-    //             Sign Up
-    //           </a>
-    //         </div>
-    //       </form>
-    //     </div>
-    //   </div>
-
-    // NEW FORM
     <div className="signup-container">
       <div className="wrap-login100">
           <form className="login100-form validate-form" onSubmit={handleLoginSubmit}>

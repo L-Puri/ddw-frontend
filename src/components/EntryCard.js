@@ -2,36 +2,39 @@ import React, {useContext} from 'react'
 import { Card, Image, Text, Badge, Button, Group } from '@mantine/core';
 import { useMantineTheme } from '@mantine/core';
 import { AuthContext } from '../context/auth.context'
+import {Link} from 'react-router-dom'
 
 function EntryCard() {
- 
-const { experiences } = useContext(AuthContext)
 
+  const { experiences } = useContext(AuthContext)
+  
   const theme = useMantineTheme();
-
   const secondaryColor = theme.colorScheme === 'dark'
     ? theme.colors.dark[1]
-: theme.colors.gray[7];
+    : theme.colors.gray[7];
 
-  return (experiences.length > 0 && // Dev temp (waiting for the map)
-
-
-    <div style={{ width: 340, margin: 'auto' }}>
+if (!experiences) {
+  return (
+  <div style={{ width: 340, margin: 'auto' }}>
       <Card className='entry-card' shadow="sm" p="lg">
         <Card.Section >
-          <Image src="https://images.unsplash.com/photo-1560275619-4662e36fa65c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3300&q=80" height={160} alt="shark" />
+          <Image src="https://images.unsplash.com/photo-1480057261736-36852db40e50" height={160} alt="shark" />
         </Card.Section>
 
         <Group position="apart" style={{ marginBottom: 5, marginTop: theme.spacing.sm }}>
-          <Text className='card-title-text' weight={500}>TITLE: {experiences.data[0]?.title}</Text>
-         
+          <Text className='card-title-text' weight={500}>DEFAULT</Text> 
           <Badge color="pink" variant="light">
             ToDo
           </Badge>
         </Group>
 
         <Text size="sm" style={{ color: secondaryColor, lineHeight: 1.5 }}>
-        An activity similar to extreme sports when it is performed as part of a dive, it allows people to get close to these large predators and generates strong sensations.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+          molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+          numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+          optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+          obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+          nihil, eveniet aliquid culpa officia aut!
         </Text>
 
         <Button className="card-btn" to="/details/:Id" variant="light" color="blue" fullWidth style={{ marginTop: 14 }}>
@@ -39,9 +42,40 @@ const { experiences } = useContext(AuthContext)
         </Button>
       </Card>
     </div>
-    
-  )
-}
+    )
+  } 
+
+ return  ( 
+  
+<>
+  {experiences.map((element, index) => {
+    return (
+      <div key={element._id} style={{ width: 340, margin: 'auto' }}>
+      <Card className='entry-card' shadow="sm" p="lg">
+        <Card.Section >
+          <Image src={element.picture} height={160} alt="shark" />
+        </Card.Section>
+
+        <Group position="apart" style={{ marginBottom: 5, marginTop: theme.spacing.sm }}>
+          <Text className='card-title-text' weight={500}>{element.title}</Text> 
+          <Badge color="pink" variant="light">
+            ToDo
+          </Badge>
+        </Group>
+
+        <Text size="sm" style={{ color: secondaryColor, lineHeight: 1.5 }}>
+        {element.description}
+        </Text>
+
+        <Button className="card-btn" to="/details/:Id" variant="light" color="blue" fullWidth style={{ marginTop: 14 }}>
+          See More Details!
+        </Button>
+      </Card>
+    </div>
+    )}
+    )}
+</>
+)
+} 
 
 export default EntryCard
-

@@ -42,54 +42,6 @@ function CreateEntryForm() {
   };
 
   return (
-    /*WORKING FORM*/
-    // <div className="create-entry-page">
-    //   <form
-    //     className="form"
-    //     onSubmit={(e) => {
-    //       handleSubmit(e);
-    //     }}
-    //   >
-    //     <div>
-    //       <label htmlFor="title">Title</label>
-    //       <input
-    //         onChange={handleChange}
-    //         type="text"
-    //         id="title"
-    //         name="title"
-    //         placeholder="Butz8er"
-    //         required
-    //       />
-    //     </div>
-
-    //     <div>
-    //       <label htmlFor="description">Description</label>
-    //       <input
-    //         onChange={handleChange}
-    //         type="text"
-    //         id="description"
-    //         name="description"
-    //         placeholder="Butz8er"
-    //         required
-    //       />
-    //     </div>
-
-    //     <div>
-    //       <label htmlFor="picture">Picture</label>
-    //       <input
-    //         onChange={handleChange}
-    //         type="text"
-    //         id="picture"
-    //         name="picture"
-    //         placeholder="Butz8er"
-    //         required
-    //       />
-    //     </div>
-
-    //     <button type="submit">Update your personal bucketlist</button>
-    //   </form>
-    // </div>
-
     <div className="create-entry-container">
       <div className="wrap-login100">
           <form className="login100-form validate-form" onSubmit={(e) => {

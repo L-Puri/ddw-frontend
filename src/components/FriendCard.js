@@ -1,6 +1,4 @@
 import React from 'react'
-// import { Card, Image, Text, Badge, Button, Group } from '@mantine/core';
-// import { useMantineTheme } from '@mantine/core';
 
 function FriendCard() {
 
