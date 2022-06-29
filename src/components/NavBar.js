@@ -81,7 +81,7 @@ function NavBar() {
       <div className="nav-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
           </div> 
-         
+        
     </nav>
 
   );

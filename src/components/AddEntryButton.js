@@ -17,7 +17,7 @@ function AddEntry() {
         <div className="div-add-btn">
             <div className="add-btn"></div>
                 <button className="text-add-btn" >
-                  <Link to="/create-entry">Add Entry</Link>
+                  <Link className="text-add-btn" to="/create-entry">Add Entry</Link>
                 
                 </button>
         </div>

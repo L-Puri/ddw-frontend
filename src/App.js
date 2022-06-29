@@ -25,10 +25,8 @@ function App() {
          <Route path="/" element={ <HomePage />} />
          <Route path="/login" element={ <LoginPage />} />
          <Route path="/signup" element={ <SignUpPage />} />
-         {/* working example of protected route: */}
          <Route path="/create-entry" element={<IsPrivate> <CreateEntryPage/> </IsPrivate> } />                 
-          {/* create dynamic routing for the following!!! */}
-         <Route path="/details/:Id" element={ <DetailsPage />} />
+         <Route path="/details/:Id" element={ <DetailsPage/>} />
          <Route path="/profile" element={ <ProfilePage />} />
          <Route path="/update-profile" element={ <UpdateProfilePage />} />
          <Route path="/test-page" element={ <TestPage />} />
@@ -40,3 +38,6 @@ function App() {
 }
 
 export default App;
+
+// protect all routes
+// send experience data to details page!

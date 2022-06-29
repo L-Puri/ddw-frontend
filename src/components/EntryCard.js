@@ -5,7 +5,6 @@ import { AuthContext } from '../context/auth.context'
 import {Link} from 'react-router-dom'
 
 function EntryCard() {
-
   const { experiences } = useContext(AuthContext)
   
   const theme = useMantineTheme();
@@ -37,7 +36,7 @@ if (!experiences) {
           nihil, eveniet aliquid culpa officia aut!
         </Text>
 
-        <Button className="card-btn" to="/details/:Id" variant="light" color="blue" fullWidth style={{ marginTop: 14 }}>
+        <Button className="card-btn" variant="light" color="blue" fullWidth style={{ marginTop: 14 }}>
           See More Details!
         </Button>
       </Card>
@@ -63,13 +62,14 @@ if (!experiences) {
           </Badge>
         </Group>
 
-        <Text size="sm" style={{ color: secondaryColor, lineHeight: 1.5 }}>
+        <Text className='text-entry-card'size="sm" style={{ color: secondaryColor, lineHeight: 1.5 }}>
         {element.description}
         </Text>
 
-        <Button className="card-btn" to="/details/:Id" variant="light" color="blue" fullWidth style={{ marginTop: 14 }}>
-          See More Details!
-        </Button>
+        <Link to={`/details/${element._id}`} state={element}>
+          <Button className="card-btn"  fullWidth style={{ marginTop: 14 }}>
+          See More</Button>
+        </Link>
       </Card>
     </div>
     )}
@@ -79,3 +79,11 @@ if (!experiences) {
 } 
 
 export default EntryCard
+
+// className="text-card-btn"
+
+//variant="light" color="blue"
+
+{/* <Button className="card-btn"  fullWidth style={{ marginTop: 14 }}>
+          <Link to={`/details/${element._id}`} state={element}>See More Details</Link>
+        </Button> */}
