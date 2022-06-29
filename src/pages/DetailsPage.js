@@ -5,10 +5,10 @@ import { useParams } from 'react-router-dom';
 
 function DetailsPage() {
   const { experiences } = useContext(AuthContext)
-  const { id } = useParams()
-  console.log("id/url: ", id)
+  let params = useParams()
+  console.log("id/url: ", params)
 
-  
+
  
   // if (!experiences) {
   //   console.log ("no experiences found")

@@ -9,6 +9,8 @@ Link {
 /* ========== NavBar ========== */
 .navbar {
   background-color: #7DA2A9;
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -247,7 +249,7 @@ Link {
   width: 700px;
   height: 350px;
   margin-bottom: 20px;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 .details-card-photo {
@@ -467,8 +469,7 @@ Link {
 .entry-card {
 border: 2px solid #1BA098;
 border-radius: 10%;
-min-height: 300px;
-/* max-height: 350px; */
+height: 350px;
 }
 
 /* Card Title */
@@ -476,10 +477,12 @@ min-height: 300px;
   font-family: 'Syne', sans-serif;
 }
 
-/* Entry Card Title
+/* Entry Card Title */
 .text-entry-card {
-  max-height: 100px;
-} */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 /* Button */
 .card-btn {
@@ -493,6 +496,7 @@ min-height: 300px;
   text-transform: uppercase;
   text-decoration: none;
   cursor: default;
+
 }
 
 .card-btn:hover {
@@ -519,18 +523,28 @@ min-height: 300px;
 
 .user-details-div {
   flex: 15%;
-  border: 1px solid red;
+  background-color: whitesmoke;
+  margin: 10px;
+  box-shadow: 2px 2px 3px grey;
+  /* border: 1px solid red; */
 }
 
 .bucket-list-div {
   flex: 75%;
-  border: 1px solid red;
+  padding: 5px;
+  background-color: whitesmoke;
+  margin: 10px;
+  box-shadow: 2px 2px 3px grey;
+  /* border: 1px solid red; */
 }
 
 .list-friends-div {
   flex: 10%;
-  border: 1px solid red;
   padding: none;
+  background-color: whitesmoke;
+  margin: 10px;
+  box-shadow: 2px 2px 3px grey;
+  /* border: 1px solid red; */
 }
 
 .user-details-title {
