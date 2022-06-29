@@ -14,7 +14,7 @@ function LoginPage(props) {
     
     const navigate = useNavigate();
 
-    const { storeToken, authenticateUser } = useContext(AuthContext) //new
+    const { storeToken } = useContext(AuthContext) //new
    
     const handleEmail = (e) => setEmail(e.target.value);
     const handlePassword = (e) => setPassword(e.target.value);
@@ -27,7 +27,6 @@ function LoginPage(props) {
       .then((response) => {
       console.log('JWT token', response.data.authToken );
       storeToken(response.data.authToken);
-      authenticateUser()
       navigate('/profile');                            
                 
       })

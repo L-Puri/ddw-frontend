@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { Card, Image, Text, Badge, Button, Group } from '@mantine/core';
 import { useMantineTheme } from '@mantine/core';
+import { AuthContext } from '../context/auth.context'
 
 function EntryCard() {
+ 
+const { experiences } = useContext(AuthContext)
 
   const theme = useMantineTheme();
 
@@ -10,7 +13,9 @@ function EntryCard() {
     ? theme.colors.dark[1]
 : theme.colors.gray[7];
 
-  return (
+  return (experiences.length > 0 && // Dev temp (waiting for the map)
+
+
     <div style={{ width: 340, margin: 'auto' }}>
       <Card className='entry-card' shadow="sm" p="lg">
         <Card.Section >
@@ -18,7 +23,8 @@ function EntryCard() {
         </Card.Section>
 
         <Group position="apart" style={{ marginBottom: 5, marginTop: theme.spacing.sm }}>
-          <Text className='card-title-text' weight={500}>... Sharkfeeding in South Africa</Text>
+          <Text className='card-title-text' weight={500}>TITLE: {experiences.data[0]?.title}</Text>
+         
           <Badge color="pink" variant="light">
             ToDo
           </Badge>
@@ -33,6 +39,7 @@ function EntryCard() {
         </Button>
       </Card>
     </div>
+    
   )
 }
 

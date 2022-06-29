@@ -7,7 +7,6 @@ function EntryList() {
   
   return (
     <div>
-
         <p>welcome, {user?.username}</p>
     </div>
   )

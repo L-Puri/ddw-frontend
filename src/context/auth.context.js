@@ -11,7 +11,6 @@ function AuthProviderWrapper(props) {
   const [isLoading, setIsLoading] = useState(true);
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
-  //new: enable update from child components (experiences):
   const [experiences, setExperiences] = useState([])
 
  
@@ -21,10 +20,14 @@ function AuthProviderWrapper(props) {
     setToken(newToken)
   }
 
-  const authenticateUser = () => {                       
+  const authenticateUser = () => {    
+                   
     const storedToken = localStorage.getItem('authToken');
-
-    if (storedToken) {
+    if (token) {
+      setIsLoggedIn(true);
+      setIsLoading(false);
+      // Get the user
+    } else if (storedToken) {
       axios.get(
         `${API_URL}/auth/verify`, 
         { headers: { Authorization: `Bearer ${storedToken}`} }
@@ -59,16 +62,35 @@ function AuthProviderWrapper(props) {
     authenticateUser();
   }  
 
-  //  function
-  //  axios get request to experiences
-  //  setstate
-  //  storestate
-  //  done
+
+  const updateExperiences = () => {
+    axios.get(`${API_URL}/auth/confirm-experiences`, { headers: { Authorization: `Bearer ${token}`}}
+    )
+    .then((response) => {
+      console.log("this users experiences from db:", response.data)
+      setExperiences(response)
+    })    
+  } 
 
   useEffect(() => {                                                
     authenticateUser(); 
-    // function
+    //updateExperiences();
   }, []);
+
+  useEffect(() => {     
+    if (isLoggedIn)     {                                      
+   updateExperiences();
+  } 
+  }, [isLoggedIn]);
+
+  useEffect(() => {      
+    if (token) {
+      authenticateUser(); 
+    }                                          
+  }, [token]);
+
+
+
 
   return (
     <AuthContext.Provider value={{ 
@@ -87,4 +109,4 @@ function AuthProviderWrapper(props) {
   )
 }
  
-export { AuthProviderWrapper, AuthContext };
+export { AuthProviderWrapper, AuthContext }
