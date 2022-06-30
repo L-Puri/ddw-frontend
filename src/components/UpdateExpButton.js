@@ -25,10 +25,10 @@ function UpdateExpButton() {
 
   return (
     <div>
-      <div className="container-delete-btn">
-        <div className="div-delete-btn">
-          <div className="delete-btn"></div>
-                <button className="text-delete-btn" to="/update-entry" onClick={directToUpdate}>
+      <div className="container-edit-btn">
+        <div className="div-edit-btn">
+          <div className="edit-btn"></div>
+                <button className="text-edit-btn" to="/update-entry" onClick={directToUpdate}>
                   Edit
                 </button>
           </div>

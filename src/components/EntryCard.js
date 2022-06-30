@@ -17,7 +17,7 @@ if (!experiences) {
   <div style={{ width: 340, margin: 'auto' }}>
       <Card className='entry-card' shadow="sm" p="lg">
         <Card.Section >
-          <Image src="https://images.unsplash.com/photo-1480057261736-36852db40e50" height={160} alt="shark" />
+          <Image src="https://images.unsplash.com/photo-1480057261736-36852db40e50" height={160} alt="default" />
         </Card.Section>
 
         <Group position="apart" style={{ marginBottom: 5, marginTop: theme.spacing.sm }}>
@@ -79,10 +79,6 @@ if (!experiences) {
 } 
 
 export default EntryCard
-
-// className="text-card-btn"
-
-//variant="light" color="blue"
 
 {/* <Button className="card-btn"  fullWidth style={{ marginTop: 14 }}>
           <Link to={`/details/${element._id}`} state={element}>See More Details</Link>

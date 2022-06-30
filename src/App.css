@@ -249,10 +249,12 @@ html {
 .details-card-title-div {
   width: 700px;
   height: 100px;
-  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-size: 20px;
   border-top-left-radius: 20%;
   border-top-right-radius: 20%;
@@ -261,9 +263,9 @@ html {
 
 .details-card-photo-div {
   width: 700px;
-  height: 350px;
+  /* height: 350px; */
   margin-bottom: 20px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .details-card-photo {
@@ -274,9 +276,9 @@ html {
 
 .details-card-info-div {
   width: 700px;
-  min-height: 220px;
+  min-height: 200px;
   margin-bottom: 20px;
-  border: 1px solid rgb(51, 0, 255);
+  /* border: 1px solid rgb(51, 0, 255); */
 }
 
 .details-card-info-location {
@@ -294,9 +296,54 @@ html {
 }
 
 .details-card-comments-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   min-height: 250px;
-  border: 1px solid rgb(0, 255, 8);
+  background-color: rgb(240, 239, 239);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  /* border: 1px solid rgb(0, 255, 8); */
 }
+
+.details-card-text-comment {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  /* border: 1px solid rgb(255, 0, 136); */
+
+}
+
+.details-card-box-comment {
+  min-height: 200px;
+  width: 600px;
+  background-color: rgb(218, 216, 216);
+  /* border: 1px solid rgb(0, 81, 255); */
+}
+
+.details-card-box-btn {
+  width: 120px;
+  height: 40px;
+  background: #7DA2A9;
+  border-radius: 25px;
+  line-height: 1.2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0 20px;
+  font-family: 'Syne', sans-serif;
+  font-size: 100%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #fff;
+  /* border: 1px solid rgb(0, 255, 89); */
+}
+
+.details-card-box-btn:hover {
+  background: #1BA098; /* ----> colour of the button when hovering*/
+}
+
 
 .details-card-btns-div {
   display: flex;
@@ -538,6 +585,7 @@ height: 350px;
   flex: 15%;
   background-color: whitesmoke;
   margin: 10px;
+  padding: 15px;
   box-shadow: 2px 2px 3px grey;
   /* border: 1px solid red; */
 }
@@ -767,6 +815,66 @@ height: 350px;
   background: rgb(250, 39, 2); /* ----> colour of the button when hovering*/
 }
 
+/*Edit Button*/
+.container-edit-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 15px; /* ----> padding size of container div */
+}
+
+.div-edit-btn {
+  width: 120px; /* ----> width of the button*/
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 25px; /* ----> radius of the corners */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.edit-btn {
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  height: 100%;
+  background: #7DA2A9; /* ----> colour of the button */
+  left: -100%;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.text-edit-btn {
+  font-family: 'Syne', sans-serif;
+  font-size: 100%;
+  font-weight: bolder;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 40px; /* ----> height of the button (don't really understand why it's placed here */
+}
+
+.text-edit-btn:hover {
+  background: #1BA098; /* ----> colour of the button when hovering*/
+}
+
 /*Create Entry Button*/
 .container-add-btn {
   display: -webkit-box;
@@ -896,6 +1004,7 @@ height: 350px;
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 20px;
+  padding-bottom: 15px;
   /* border: 2px solid rgb(255, 0, 255); */
 }
 
@@ -1319,10 +1428,10 @@ iframe {
   transition: all 0.4s;
 
   background: #1BA098;
-  background: -webkit-linear-gradient(left, #21d4fd, #b721ff);
+  /* background: -webkit-linear-gradient(left, #21d4fd, #b721ff);
   background: -o-linear-gradient(left, #21d4fd, #b721ff);
   background: -moz-linear-gradient(left, #21d4fd, #b721ff);
-  background: linear-gradient(left, #21d4fd, #b721ff);
+  background: linear-gradient(left, #21d4fd, #b721ff); */
 }
 
 .focus-input100::after {
@@ -1384,7 +1493,7 @@ iframe {
   transition: all 0.4s;
 }
 
-.btn-show-pass:hover {
+/* .btn-show-pass:hover {
   color: #6a7dfe;
   color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
   color: -o-linear-gradient(left, #21d4fd, #b721ff);
@@ -1398,7 +1507,7 @@ iframe {
   color: -o-linear-gradient(left, #21d4fd, #b721ff);
   color: -moz-linear-gradient(left, #21d4fd, #b721ff);
   color: linear-gradient(left, #21d4fd, #b721ff);
-}
+} */
 
 
 
@@ -1432,10 +1541,10 @@ iframe {
   width: 300%;
   height: 100%;
   background: #7DA2A9;
-  background: -webkit-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+  /* background: -webkit-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
   background: -o-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
   background: -moz-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
-  background: linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+  background: linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff); */
   top: 0;
   left: -100%;
 

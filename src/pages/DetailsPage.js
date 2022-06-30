@@ -48,7 +48,7 @@ const handleSubmit = values => {
 
 if (!experiences) return <DetailsCard /> 
 else {
-  const searchObject = experiences.filter((specificExperience) => specificExperience._id == params.Id)
+  const searchObject = experiences.filter((specificExperience) => specificExperience._id === params.Id)
   //console.log("searchObject:", searchObject)
   return (
     <div className='details-card-page-div'>
@@ -63,16 +63,14 @@ else {
             <p className='details-card-info-description'>{searchObject[0]?.description}</p>
         </div>     
         <div className='details-card-comments-div'>
-                <p className='details-card-text-comment'>Leave your comment here:</p>
-
+            <p className='details-card-text-comment'>Leave your comment here:</p>
                 {/* NEW: Create & posr comment here: */}
                 <form  onSubmit={(e) => {handleSubmit(e)}}>
-                  <input value =" " label="comment" placeholder="click here and leave comment" type="textarea "required />
-                  <button type="submit">Submit</button>
+                  <input className='details-card-box-comment' value =" " label="comment" placeholder="click here and leave comment" type="textarea "required />
                 </form>
+                <button className='details-card-box-btn' type="submit">Submit</button>
               {/*  end of comment section, inside of className='details-card-comments-div'!*/}
-
-            </div> 
+        </div> 
         <div className='details-card-btns-div'>
             <UpdateExpButton/>
             <DeleteExpButton/>
