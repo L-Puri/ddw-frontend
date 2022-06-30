@@ -9,7 +9,7 @@ function CreateEntryForm() {
   const [title, setTitle] = useState(" ");
   const [description, setDescription] = useState(" ");
   const [picture, setPicture] = useState(" ");
-  //new: enable update from child components (experiences):
+  //new new: enable update from child components (experiences):
   const {token, experiences} = useContext(AuthContext)
   console.log("experiences: ",  experiences)
 
