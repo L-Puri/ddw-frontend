@@ -29,7 +29,11 @@ else {
         <div className='details-card-info-div'>
             {/* <p className='details-card-info-location'>South Africa</p> */}
             <p className='details-card-info-description'>{searchObject[0]?.description}</p>
-        </div>
+        </div>     
+        <div className='details-card-comments-div'>
+                <p className='details-card-text-comment'>Leave your comment here:</p>
+                
+            </div>
         <div className='details-card-btns-div'>
             <button className="update-experience-btn" to="/" >
               Edit

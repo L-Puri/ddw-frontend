@@ -161,13 +161,23 @@ html {
   font-family: 'Syne', sans-serif;
   font-weight: bolder;
   margin-top: 100px;
-  margin-left: 10px;
-  font-size: 55px;
+  margin-left: 26px;
+  font-size: 70px;
   position: absolute;
   color: #121212;
   text-shadow: 2px 2px 5px #A9A9AC;
   /* border: 1px solid blue; */
 }
+
+@media screen and (max-width: 1024px) {
+  .title-text{
+    font-size: 64px;
+    margin-left: 26px;
+    }
+
+    
+}
+
 
 .bcg-homepage {
   align-items: center;
@@ -260,9 +270,9 @@ html {
 
 .details-card-info-div {
   width: 700px;
-  height: 450px;
+  min-height: 220px;
   margin-bottom: 20px;
-  /* border: 1px solid rgb(51, 0, 255); */
+  border: 1px solid rgb(51, 0, 255);
 }
 
 .details-card-info-location {
@@ -277,6 +287,11 @@ html {
   padding-left: 20px;
   padding-right: 20px;
   text-align: justify;
+}
+
+.details-card-comments-div {
+  min-height: 250px;
+  border: 1px solid rgb(0, 255, 8);
 }
 
 .details-card-btns-div {

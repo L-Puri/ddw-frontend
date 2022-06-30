@@ -14,6 +14,10 @@ function DetailsCard() {
                 <p className='details-card-info-location'>South Africa</p>
                 <p className='details-card-info-description'>An activity similar to extreme sports when it is performed as part of a dive, it allows people to get close to these large predators and generates strong sensations.</p>
             </div>
+            <div className='details-card-comments-div'>
+                <p className='details-card-text-comment'>Lorem Ipsum</p>
+                
+            </div>
             <div className='details-card-btns-div'>
                 <button className="update-experience-btn" to="/" >
                   Edit
