@@ -1,7 +1,7 @@
 import React from 'react'
 import { AuthContext } from "../context/auth.context";
 import { useContext } from "react";
-import DeleteModal from './DeleteModal';
+// import DeleteModal from './DeleteModal';
 
 function DeleteButton() {
 

@@ -65,7 +65,7 @@ function AuthProviderWrapper(props) {
     axios.get(`${API_URL}/auth/confirm-experiences`, { headers: { Authorization: `Bearer ${token}`}}
     )
     .then((response) => {
-      console.log("this users experiences from db:", response.data)
+      //console.log("this users experiences from db:", response.data)
       setExperiences(response.data)
     })    
   } 

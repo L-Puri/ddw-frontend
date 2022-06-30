@@ -5,7 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import {TextInput} from "react-native"
 import { useForm } from "react-hook-form"
 import DeleteExpButton from "../components/DeleteExpButton"
-
+import UpdateExpButton from "../components/UpdateExpButton"
 
 
 function DetailsPage() {
@@ -74,9 +74,7 @@ else {
 
             </div> 
         <div className='details-card-btns-div'>
-            <button className="update-experience-btn">
-              Edit
-            </button>
+            <UpdateExpButton/>
             <DeleteExpButton/>
         </div>
         
@@ -87,12 +85,3 @@ else {
 }
 }
 export default DetailsPage
-
-/* taken from line 77 to 83
-<button className="delete-experience-btn" type="submit" to="/profile">
-              Delete 
-              
-            </button>
-
-
-*/

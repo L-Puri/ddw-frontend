@@ -25,7 +25,7 @@ function NavBar() {
         </Link>
         <p id="brand-name">Don't Die Without...</p>
       </div>
-      {/* <Link to="http://localhost:3000/login" className="toggle-button"> */}
+      {/* <Link to="http://localhost:3000/login" activeClassName="toggle-button"> */}
         {/* <span className="bar"></span> */}
         {/* <span className="bar"></span> */}
         {/* <span className="bar"></span> */}

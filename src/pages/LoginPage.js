@@ -3,8 +3,9 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from '../context/auth.context'
 import LoginForm from "../components/LoginForm";
+import { BASE_API_URL } from '../utils/constants'
 
-const API_URL = "http://localhost:5005";
+// const API_URL = "http://localhost:5005";
 
 function LoginPage(props) {
 
@@ -23,7 +24,7 @@ function LoginPage(props) {
         e.preventDefault();
         const requestBody = { email, password };
 
-    axios.post(`${API_URL}/auth/login`, requestBody)
+    axios.post(`${BASE_API_URL}/auth/login`, requestBody) 
       .then((response) => {
       console.log('JWT token', response.data.authToken );
       storeToken(response.data.authToken);

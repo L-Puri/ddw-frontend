@@ -16,7 +16,7 @@ import { AuthContext } from '../context/auth.context'
 function ProfilePage(props) {
   //testwise
   const { experiences } = useContext(AuthContext)
-  console.log("experiences: ", experiences)
+  //console.log("experiences: ", experiences)
   // end of test
   return (
     <div className="profile-page">

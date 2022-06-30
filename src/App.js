@@ -15,6 +15,7 @@ import ProfilePage from './pages/ProfilePage';
 import UpdateProfilePage from './pages/UpdateProfilePage';
 import TestPage from "./pages/TestPage";
 import TestFormPage from "./pages/TestFormPage";
+import UpdateEntryPage from './pages/UpdateEntryPage';
 
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
          <Route path="/" element={ <HomePage />} />
          <Route path="/login" element={ <LoginPage />} />
          <Route path="/signup" element={ <SignUpPage />} />
-         <Route path="/create-entry" element={<IsPrivate> <CreateEntryPage/> </IsPrivate> } />                 
+         <Route path="/create-entry" element={<IsPrivate> <CreateEntryPage/> </IsPrivate> } /> 
+         <Route path="/update-entry" element={<IsPrivate> <UpdateEntryPage/> </IsPrivate> } />            
          <Route path="/details/:Id" element={<IsPrivate> <DetailsPage/> </IsPrivate>} />
          <Route path="/profile" element={<IsPrivate> <ProfilePage /> </IsPrivate>} />
          <Route path="/update-profile" element={<IsPrivate> <UpdateProfilePage /> </IsPrivate>} />
