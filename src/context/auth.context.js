@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { createContext } from "react";
-import { BASE_API_URL } from '../utils/constants'
 
-// const API_URL = "http://localhost:5005";
+const API_URL = "http://localhost:5005";
  
 const AuthContext = createContext();
  
@@ -28,7 +27,7 @@ function AuthProviderWrapper(props) {
       // Get the user
     } else if (storedToken) {
       axios.get(
-        `${BASE_API_URL}/auth/verify`, 
+        `${API_URL}/auth/verify`, 
         { headers: { Authorization: `Bearer ${storedToken}`} }
       )
       .then((response) => {
@@ -51,67 +50,7 @@ function AuthProviderWrapper(props) {
     }   
   }
 
-  // const authenticateUser = () => {    
-                   
-  //   const storedToken = localStorage.getItem('authToken');
-  //   if (token) {
-  //     setIsLoggedIn(true);
-  //     setIsLoading(false);
-  //     // Get the user
-  //   } else if (storedToken) {
-  //     axios.get(
-  //       `${API_URL}/auth/verify`, 
-  //       { headers: { Authorization: `Bearer ${storedToken}`} }
-  //     )
-  //     .then((response) => {
-  //       const user = response.data;    
-  //       setIsLoggedIn(true);
-  //       setIsLoading(false);
-  //       setUser(user);
-  //       setToken(storedToken)   
-  //     })
-  //     .catch((error) => {
-              
-  //       setIsLoggedIn(false);
-  //       setIsLoading(false);
-  //       setUser(null);        
-  //     });      
-  //   } else {
-  //       setIsLoggedIn(false);
-  //       setIsLoading(false);
-  //       setUser(null);      
-  //   }   
-  // }
-
-  const storedToken = localStorage.getItem('authToken');
-  if (token) {
-    setIsLoggedIn(true);
-    setIsLoading(false);
-    // Get the user
-  } else if (storedToken) {
-    axios.get(
-      `${API_URL}/auth/verify`, 
-      { headers: { Authorization: `Bearer ${storedToken}`} }
-    )
-    .then((response) => {
-      const user = response.data;    
-      setIsLoggedIn(true);
-      setIsLoading(false);
-      setUser(user);
-      setToken(storedToken)   
-    })
-    .catch((error) => {
-            
-      setIsLoggedIn(false);
-      setIsLoading(false);
-      setUser(null);        
-    });      
-  } else {
-      setIsLoggedIn(false);
-      setIsLoading(false);
-      setUser(null);      
-  }   
-}
+  
   
   const removeToken = () => {                    
     localStorage.removeItem("authToken");
