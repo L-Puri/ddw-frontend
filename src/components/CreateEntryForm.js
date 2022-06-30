@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import axios from "axios";
 import DDWText from '../images/DDW-Text.png'
+import { BASE_API_URL } from '../utils/constants'
 
 function CreateEntryForm() {
   const [title, setTitle] = useState(" ");
@@ -24,7 +25,7 @@ function CreateEntryForm() {
     };
     console.log("new experience: ", newExperience)
     
-    let responseAxios = await axios.post("http://localhost:5005/experiences/create-entry", newExperience, { headers: { Authorization: `Bearer ${token}`} })
+    let responseAxios = await axios.post(`${BASE_API_URL}/experiences/create-entry`, newExperience, { headers: { Authorization: `Bearer ${token}`} })
     navigate("/profile");
   };
   

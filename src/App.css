@@ -169,14 +169,27 @@ html {
   /* border: 1px solid blue; */
 }
 
+/* ========== Media Queries for medium screen ========== */
 @media screen and (max-width: 1024px) {
-  .title-text{
+  
+  /* .title-text{
     font-size: 64px;
     margin-left: 26px;
+    } */
+
+    /* .login-page-div{
+
     }
 
+    .login-form-div{ */
 
-}
+    }
+
+    /* .signup-container {
+    
+    }  */
+
+
 
 
 .bcg-homepage {

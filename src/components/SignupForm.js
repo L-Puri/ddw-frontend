@@ -4,6 +4,7 @@ import {useState} from 'react'
 import { useNavigate } from "react-router-dom";
 import DDWText from '../images/DDW-Text.png'
 import { Link } from "react-router-dom";
+import { BASE_API_URL } from '../utils/constants'
 
 
 function SignupForm() {
@@ -21,7 +22,7 @@ function SignupForm() {
       email,
       password
     }
-    let responseAxios = await axios.post("http://localhost:5005/auth/signup", newUser)
+    let responseAxios = await axios.post(`${BASE_API_URL}/auth/signup`, newUser)
     navigate('/login')
     
   }
