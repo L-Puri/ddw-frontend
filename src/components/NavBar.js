@@ -69,12 +69,6 @@ function NavBar() {
               Logout
             </Link>
           </li>
-
-          <li className="nav-item">
-            <Link to="/fgladfghl" activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}>Error Page</Link>
-          </li>
         </ul>
 
       </div>

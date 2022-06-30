@@ -67,8 +67,8 @@ if (!experiences) {
         </Text>
 
         <Link to={`/details/${element._id}`} state={element}>
-          <Button className="card-btn"  fullWidth style={{ marginTop: 14 }}>
-          See More</Button>
+          <button className="card-btn"  fullWidth style={{ marginTop: 14 }}>
+          See More</button>
         </Link>
       </Card>
     </div>
