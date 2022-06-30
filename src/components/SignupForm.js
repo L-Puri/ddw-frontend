@@ -3,6 +3,7 @@ import axios from 'axios'
 import {useState} from 'react'
 import { useNavigate } from "react-router-dom";
 import DDWText from '../images/DDW-Text.png'
+import { Link } from "react-router-dom";
 
 
 function SignupForm() {
@@ -94,10 +95,7 @@ function SignupForm() {
               <span className="txt1">
                 Already have an account?
               </span>
-
-              <a className="txt2" href="http://localhost:3000/login">
-                Login
-              </a>
+              <Link className="txt2" to="/"> Login </Link> 
             </div>
           </form>
         </div>
