@@ -13,8 +13,6 @@ function AuthProviderWrapper(props) {
   const [token, setToken] = useState(null);
   const [experiences, setExperiences] = useState([])
 
- 
-
   const storeToken = (newToken) => {       
     localStorage.setItem('authToken', newToken);
     setToken(newToken)
@@ -89,9 +87,7 @@ function AuthProviderWrapper(props) {
     }                                          
   }, [token]);
 
-
-
-
+ 
   return (
     <AuthContext.Provider value={{ 
       isLoggedIn, 

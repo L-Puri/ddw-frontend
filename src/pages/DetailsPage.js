@@ -4,6 +4,7 @@ import { AuthContext } from '../context/auth.context'
 import { useParams, useNavigate } from 'react-router-dom';
 import {TextInput} from "react-native"
 import { useForm } from "react-hook-form"
+import DeleteExpButton from "../components/DeleteExpButton"
 
 
 
@@ -17,9 +18,7 @@ function DetailsPage() {
   //console.log(params.Id)
   //console.log("experiences: ", experiences)
 
-
-//        Code for creating comments
-
+//                Code for creating comments
 const form = useForm({
   initialValues: {
     comment: " ",
@@ -44,17 +43,13 @@ const handleSubmit = values => {
   values.comment = " "
   navigate(`/details/${searchId}`)
 }
-
-
 /// until here
-
-
 
 
 if (!experiences) return <DetailsCard /> 
 else {
   const searchObject = experiences.filter((specificExperience) => specificExperience._id == params.Id)
-  console.log("searchObject:", searchObject)
+  //console.log("searchObject:", searchObject)
   return (
     <div className='details-card-page-div'>
     <div className='details-card-div'>
@@ -79,12 +74,10 @@ else {
 
             </div> 
         <div className='details-card-btns-div'>
-            <button className="update-experience-btn" to="/" >
+            <button className="update-experience-btn">
               Edit
             </button>
-            <button className="delete-experience-btn" to="/" >
-              Delete
-            </button>
+            <DeleteExpButton/>
         </div>
         
     </div>
@@ -94,3 +87,12 @@ else {
 }
 }
 export default DetailsPage
+
+/* taken from line 77 to 83
+<button className="delete-experience-btn" type="submit" to="/profile">
+              Delete 
+              
+            </button>
+
+
+*/

@@ -45,22 +45,22 @@ function NavBar() {
           <li className="nav-item">
             <Link to="/profile" activeClassName="active"
                 className="nav-links"
-                onClick={handleClick}>My Bucket</Link>
+                onClick={handleClick}>My Profile</Link>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link to="/entry-details" activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}>Details</Link>
-          </li>
-          <li className="nav-item">
+          </li> */}
+          {/* <li className="nav-item">
             <Link to="/random-goal" activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}>Random Goal</Link>
-          </li>
+          </li> */}
           <li className="nav-item">
             <Link to="/create-entry" activeClassName="active"
                 className="nav-links"
-                onClick={handleClick}>Create Entry</Link>
+                onClick={handleClick}>Add Item</Link>
           </li>
           <li className="nav-item">
             <Link to="/" activeClassName="active"

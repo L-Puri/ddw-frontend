@@ -25,8 +25,8 @@ function ProfilePage(props) {
         
         <UserDetails />
         <div className='profile-btns'>
-          <ProfileDetailsButton />
-          <UpdateProfileButton />
+          {/* <ProfileDetailsButton /> 
+          <UpdateProfileButton /> */}
           <LogoutButton />
           <DeleteButton />
         </div>
