@@ -3,6 +3,7 @@ import DDWText from '../images/DDW-Text.png'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from '../context/auth.context'
+import { Link } from "react-router-dom";
 
 const API_URL = "http://localhost:5005";
 
@@ -86,10 +87,7 @@ function LoginForm() {
               <span className="txt1">
                  You're not a member?
               </span>
-
-              <a className="txt2" href="/signup">
-                Sign Up
-              </a>
+                <Link className="txt2" to="/signup"> Sign up </Link>   
             </div>
           </form>
           { errorMessage && <p className="error-message">{errorMessage}</p> }
@@ -99,3 +97,21 @@ function LoginForm() {
 }
 
 export default LoginForm
+
+
+/*
+  <div className="text-center p-t-115">
+              <span className="txt1">
+                 You're not a member?
+              </span>
+
+              <a className="txt2" href="/signup">
+                Sign Up
+              </a>
+            </div>
+
+
+
+
+
+*/
