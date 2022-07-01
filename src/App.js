@@ -40,6 +40,3 @@ function App() {
 }
 
 export default App;
-
-// protect all routes
-// send experience data to details page!

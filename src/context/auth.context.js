@@ -3,7 +3,7 @@ import axios from "axios";
 import { createContext } from "react";
 import { BASE_API_URL } from '../utils/constants'
 
-const API_URL = "http://localhost:5005";
+
  
 const AuthContext = createContext();
  
@@ -27,7 +27,7 @@ function AuthProviderWrapper(props) {
       setIsLoading(false);
     } else if (storedToken) {
       axios.get(
-        `${API_URL}/auth/verify`, 
+        `${BASE_API_URL}/auth/verify`, 
         { headers: { Authorization: `Bearer ${storedToken}`} }
       )
       .then((response) => {
@@ -61,7 +61,7 @@ function AuthProviderWrapper(props) {
   }  
 
   const updateExperiences = () => {
-    axios.get(`${API_URL}/auth/confirm-experiences`, { headers: { Authorization: `Bearer ${token}`}}
+    axios.get(`${BASE_API_URL}/auth/confirm-experiences`, { headers: { Authorization: `Bearer ${token}`}}
     )
     .then((response) => {
       //console.log("this users experiences from db:", response.data)
