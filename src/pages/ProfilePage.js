@@ -12,26 +12,22 @@ import FriendCard from '../components/FriendCard';
 // testwise
 import { AuthContext } from '../context/auth.context'
 
-
-function ProfilePage(props) {
+function ProfilePage() {
   //testwise
-  const { experiences } = useContext(AuthContext)
+  //const { experiences } = useContext(AuthContext)
   //console.log("experiences: ", experiences)
   // end of test
   return (
     <div className="profile-page">
       <div className='user-details-div'>
         <p className="user-details-title">User Profile</p>
-        
         <UserDetails />
         <div className='profile-btns'>
-          {/* <ProfileDetailsButton /> 
-          <UpdateProfileButton /> */}
+          <UpdateProfileButton /> 
           <LogoutButton />
           <DeleteButton />
         </div>
       </div>
-        {/* render list of your "entries", which are saved in the database */}
         <div className='bucket-list-div'>
         <h2 className="bucket-list-title">Personal Bucket List</h2>
         <div className='add-entry-card-div'>
@@ -39,11 +35,8 @@ function ProfilePage(props) {
           </div>
         <div className='bucket-list-card-div'>
           <EntryCard />
-          
-          
         </div>
       </div>
-      {/* render list of friends, which is an array in the db */}
       <div className='list-friends-div'>
         <h2 className="friends-list-title">List of Friends</h2>
         <FriendCard />
@@ -53,7 +46,3 @@ function ProfilePage(props) {
 }
 
 export default ProfilePage
-
-
-
-

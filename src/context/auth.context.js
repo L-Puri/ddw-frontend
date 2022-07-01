@@ -3,8 +3,6 @@ import axios from "axios";
 import { createContext } from "react";
 import { BASE_API_URL } from '../utils/constants'
 
-
- 
 const AuthContext = createContext();
  
 function AuthProviderWrapper(props) {
