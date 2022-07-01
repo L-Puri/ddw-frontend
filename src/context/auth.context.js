@@ -93,7 +93,8 @@ function AuthProviderWrapper(props) {
       token,
       authenticateUser,
       logOutUser,
-      experiences
+      experiences,
+      updateExperiences
       }}
       >
       {props.children}

@@ -5,11 +5,11 @@ import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { BASE_API_URL } from '../utils/constants'
 
-function UpdateExpButton() {
+function UpdateExpButton({id}) {
     const navigate = useNavigate();
 
 const directToUpdate = event => {
-    navigate("/update-entry");
+    navigate(`/update-entry/${id}`);
    }
 
   return (
@@ -17,7 +17,7 @@ const directToUpdate = event => {
       <div className="container-edit-btn">
         <div className="div-edit-btn">
           <div className="edit-btn"></div>
-                <button className="text-edit-btn" to="/update-entry" onClick={directToUpdate}>
+                <button className="text-edit-btn" onClick={directToUpdate}>
                   Edit
                 </button>
           </div>

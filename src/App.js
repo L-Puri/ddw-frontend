@@ -27,7 +27,7 @@ function App() {
          <Route path="/login" element={ <LoginPage />} />
          <Route path="/signup" element={ <SignUpPage />} />
          <Route path="/create-entry" element={<IsPrivate> <CreateEntryPage/> </IsPrivate> } /> 
-         <Route path="/update-entry" element={<IsPrivate> <UpdateEntryPage/> </IsPrivate> } />            
+         <Route path="/update-entry/:Id" element={<IsPrivate> <UpdateEntryPage/> </IsPrivate> } />            
          <Route path="/details/:Id" element={<IsPrivate> <DetailsPage/> </IsPrivate>} />
          <Route path="/profile" element={<IsPrivate> <ProfilePage /> </IsPrivate>} />
          <Route path="/update-profile" element={<IsPrivate> <UpdateProfilePage /> </IsPrivate>} />

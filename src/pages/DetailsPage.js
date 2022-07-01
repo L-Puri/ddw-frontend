@@ -72,7 +72,7 @@ else {
               {/*  end of comment section, inside of className='details-card-comments-div'!*/}
         </div> 
         <div className='details-card-btns-div'>
-            <UpdateExpButton/>
+            <UpdateExpButton id={params.Id}/>
             <DeleteExpButton/>
         </div>
         

@@ -1,5 +1,4 @@
-import React, {useContext} from 'react'
-// import { Link } from "react-router-dom";
+import React, {useContext, useEffect} from 'react'
 import EntryCard from '../components/EntryCard'
 import UserDetails from "../components/UserDetails"
 import ProfileDetailsButton from '../components/ProfileDetailsButton';
@@ -13,10 +12,13 @@ import FriendCard from '../components/FriendCard';
 import { AuthContext } from '../context/auth.context'
 
 function ProfilePage() {
-  //testwise
-  //const { experiences } = useContext(AuthContext)
-  //console.log("experiences: ", experiences)
-  // end of test
+ 
+  const { updateExperiences } = useContext(AuthContext)
+
+  useEffect(() => {      
+    updateExperiences()                               
+  }, []);
+
   return (
     <div className="profile-page">
       <div className='user-details-div'>
