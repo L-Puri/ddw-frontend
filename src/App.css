@@ -259,7 +259,7 @@ html {
   margin: 0 25px 15px 25px;
   border-top-left-radius: 20%;
   border-top-right-radius: 20%;
-  border: 1px solid rgb(255, 0, 234);
+  /* border: 1px solid rgb(255, 0, 234); */
 }
 
 .details-card-photo-div {
