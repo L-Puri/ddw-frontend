@@ -10,10 +10,8 @@ function CreateEntryForm() {
   const [title, setTitle] = useState(" ");
   const [description, setDescription] = useState(" ");
   const [picture, setPicture] = useState(" ");
-  //new new: enable update from child components (experiences):
   const {token, experiences} = useContext(AuthContext)
   console.log("experiences: ",  experiences)
-
   const navigate = useNavigate();
 
   const handleSubmit = async event => {
@@ -29,7 +27,6 @@ function CreateEntryForm() {
     navigate("/profile");
   };
   
-
   const handleChange = (event) => {
     console.log(event.target.name);
     if (event.target.name === "title") {
@@ -65,14 +62,6 @@ function CreateEntryForm() {
             required/>
               <span className="focus-input100" data-placeholder="Title"></span>
             </div>
-
-            {/* <div className="wrap-input100 validate-input">
-              <input className="input100" onChange={handleChange}
-            type="text"
-            name="location"
-            required/>
-              <span className="focus-input100" data-placeholder="Location"></span>
-            </div> */}
 
             <div className="wrap-input100 validate-input">
               <input className="input100" onChange={handleChange}

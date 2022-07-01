@@ -79,7 +79,3 @@ if (!experiences) {
 } 
 
 export default EntryCard
-
-{/* <Button className="card-btn"  fullWidth style={{ marginTop: 14 }}>
-          <Link to={`/details/${element._id}`} state={element}>See More Details</Link>
-        </Button> */}

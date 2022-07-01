@@ -57,11 +57,8 @@ function updateProfileForm() {
       <button type="submit">Update your personal info</button>
     </form>
 
-
     </div>
   )
 }
 
 export default updateProfileForm
-
-

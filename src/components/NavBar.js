@@ -4,14 +4,11 @@ import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import {Link} from 'react-router-dom'
 
-
-
 function NavBar() {
    const [click, setClick] = useState(false);
 
    const handleClick = () => setClick(!click);
   const {
-    // new
     isLoggedIn,
     user,
     logOutUser,
@@ -25,11 +22,6 @@ function NavBar() {
         </Link>
         <p id="brand-name">Don't Die Without...</p>
       </div>
-      {/* <Link to="http://localhost:3000/login" activeClassName="toggle-button"> */}
-        {/* <span className="bar"></span> */}
-        {/* <span className="bar"></span> */}
-        {/* <span className="bar"></span> */}
-      {/* </Link> */}
       <div class="navbar-links">
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
@@ -47,16 +39,6 @@ function NavBar() {
                 className="nav-links"
                 onClick={handleClick}>My Profile</Link>
           </li>
-          {/* <li className="nav-item">
-            <Link to="/entry-details" activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}>Details</Link>
-          </li> */}
-          {/* <li className="nav-item">
-            <Link to="/random-goal" activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}>Random Goal</Link>
-          </li> */}
           <li className="nav-item">
             <Link to="/create-entry" activeClassName="active"
                 className="nav-links"
@@ -70,40 +52,12 @@ function NavBar() {
             </Link>
           </li>
         </ul>
-
       </div>
       <div className="nav-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
           </div> 
-        
     </nav>
-
   );
 }
 
-export default NavBar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default NavBar

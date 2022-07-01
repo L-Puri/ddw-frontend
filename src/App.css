@@ -247,7 +247,7 @@ html {
 }
 
 .details-card-title-div {
-  width: 700px;
+  width: 650px;
   height: 100px;
   margin-top: 5px;
   margin-bottom: 15px;
@@ -256,9 +256,10 @@ html {
   align-items: center;
   text-align: center;
   font-size: 20px;
+  margin: 0 25px 15px 25px;
   border-top-left-radius: 20%;
   border-top-right-radius: 20%;
-  /* border: 1px solid rgb(255, 0, 234); */
+  border: 1px solid rgb(255, 0, 234);
 }
 
 .details-card-photo-div {
@@ -302,6 +303,7 @@ html {
   align-items: center;
   align-content: center;
   min-height: 250px;
+  width: 690px;
   background-color: rgb(240, 239, 239);
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;

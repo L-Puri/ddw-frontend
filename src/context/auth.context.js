@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { createContext } from "react";
+import { BASE_API_URL } from '../utils/constants'
 
 const API_URL = "http://localhost:5005";
  
@@ -24,7 +25,6 @@ function AuthProviderWrapper(props) {
     if (token) {
       setIsLoggedIn(true);
       setIsLoading(false);
-      // Get the user
     } else if (storedToken) {
       axios.get(
         `${API_URL}/auth/verify`, 
@@ -50,8 +50,6 @@ function AuthProviderWrapper(props) {
     }   
   }
 
-  
-  
   const removeToken = () => {                    
     localStorage.removeItem("authToken");
     setToken(null);
@@ -61,7 +59,6 @@ function AuthProviderWrapper(props) {
     removeToken();   
     authenticateUser();
   }  
-
 
   const updateExperiences = () => {
     axios.get(`${API_URL}/auth/confirm-experiences`, { headers: { Authorization: `Bearer ${token}`}}
@@ -89,7 +86,6 @@ function AuthProviderWrapper(props) {
     }                                          
   }, [token]);
 
- 
   return (
     <AuthContext.Provider value={{ 
       isLoggedIn, 

@@ -6,7 +6,6 @@ import DDWText from '../images/DDW-Text.png'
 import { Link } from "react-router-dom";
 import { BASE_API_URL } from '../utils/constants'
 
-
 function SignupForm() {
 
   const [username, setUsername] =  useState(" ")
@@ -24,7 +23,6 @@ function SignupForm() {
     }
     let responseAxios = await axios.post(`${BASE_API_URL}/auth/signup`, newUser)
     navigate('/login')
-    
   }
   
   const handleChange = event => {

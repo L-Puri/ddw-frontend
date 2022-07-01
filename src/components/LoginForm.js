@@ -25,7 +25,6 @@ function LoginForm() {
 
   axios.post(`${BASE_API_URL}/auth/login`, requestBody)
     .then((response) => {
-    //console.log('JWT token', response.data.authToken );
     storeToken(response.data.authToken);
     navigate('/profile');                            
               
@@ -33,10 +32,7 @@ function LoginForm() {
     .catch((error) => {
       console.log(error)
       
-      // const errorDescription = error.response.data.message;
-      // setErrorMessage(errorDescription);
     })
-
   };
 
   return (
@@ -96,21 +92,3 @@ function LoginForm() {
 }
 
 export default LoginForm
-
-
-/*
-  <div className="text-center p-t-115">
-              <span className="txt1">
-                 You're not a member?
-              </span>
-
-              <a className="txt2" href="/signup">
-                Sign Up
-              </a>
-            </div>
-
-
-
-
-
-*/

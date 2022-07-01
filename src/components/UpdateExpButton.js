@@ -5,21 +5,10 @@ import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { BASE_API_URL } from '../utils/constants'
 
- 
 function UpdateExpButton() {
     const navigate = useNavigate();
-    
-//   const {
-//     token
-//   } = useContext(AuthContext);
 
-//     let params = useParams()
-//     const searchId = params.Id
-//     //console.log(searchId)
-//     const navigate = useNavigate();
-
-   const directToUpdate = event => {
-   //let responseAxios = await axios.put(`${BASE_API_URL}/experiences/update-entry/${searchId}`, { headers: { Authorization: `Bearer ${token}`} })
+const directToUpdate = event => {
     navigate("/update-entry");
    }
 

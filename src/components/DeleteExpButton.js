@@ -14,7 +14,6 @@ function DeleteExpButton() {
 
     let params = useParams()
     const searchId = params.Id
-    //console.log(searchId)
     const navigate = useNavigate();
 
     const handleDelete = async event => {
